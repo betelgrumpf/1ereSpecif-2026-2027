@@ -1,0 +1,169 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{\textcolor{red}{Correction $-$ préparation DS n$^{\circ}02$ $-$ Automatismes}}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+	
+%	\noindent Nom: ${\scriptstyle  .........................................................}$ \hskip 1.8cm Prénom: ${\scriptstyle  ...................................................}$ 
+	
+	\vspace{.5cm}
+	
+	\begin{center}
+		
+		
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						\textcolor{red}{Correction $-$ Préparation DS n$^{\circ}02$ $-$ Automatismes\\
+						Proportion et pourcentage} 
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+%\begin{center}\textbf{55min - Barème indicatif}\end{center}
+%\begin{center}\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\end{center}
+%\begin{center}\textbf{Calculatrice non autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+\vspace*{-0.5cm}
+\exerciceDS{(Calculer un pourcentage) $-$ 6 points}
+
+Calculer:
+%\begin{multicols}{2}
+	\begin{enumMet}
+		\item $25\ \%$ de $900$ ;
+		\begin{corrBox}
+			$25\ \%\times 900=\dfrac{900}{4}=225$		
+		\end{corrBox}
+		\item $30\ \%$ de $510$;
+		\begin{corrBox}
+			$30\ \%\times 510=3\times 10\ \% \times 510=3\times 51=153$		
+		\end{corrBox}
+		\item $0,5\ \%$ de $24\ 600$;
+		\begin{corrBox}
+			$0,5\ \%\times 24\ 600=\dfrac{1\ \%\times 24\ 600}{2}=\dfrac{246}{2}=123$
+		\end{corrBox}
+		\item $130\ \%$ de $40$.
+		\begin{corrBox}
+			$130\ \%\times 40=40\ \%\times 130= 4\times 10\ \%\times 130=4\times 13=52$
+		\end{corrBox}
+		\item $5\ \%$ de $700$.
+		\begin{corrBox}
+			$5\ \%\times 700=\dfrac{10\ \%\times 700}{2}=\dfrac{70}{2}=35$
+		\end{corrBox}
+		\item $14\ \%$ de $900$.
+		\begin{corrBox}
+			$14\ \%\times 900=10\ \%\times 900+4\times 1\ \%\times 900=90+4\times 9=126$
+		\end{corrBox}
+	\end{enumMet}
+%\end{multicols}
+
+\vspace*{-0.4cm}
+\exerciceDS{(Calculer une proportion ou un effectif) $-$ 5 points}
+\begin{enumMet}
+	\item Calculer $p$ lorsque $n_S = 200$ et $n_E = 1\ 000$.\\
+	Écrire le résultat sous la forme d'un pourcentage.
+	\begin{corrBox}
+		$p=\dfrac{n_S}{n_E}=\dfrac{200}{1\ 000}=\dfrac{1}{5}=0,2=20\%$		
+	\end{corrBox}
+	\item Calculer $p$ lorsque $n_S = 20$ et $n_E= 8\ 000$.\\
+	Écrire le résultat sous la forme d'un pourcentage.
+	\begin{corrBox}
+		$p=\dfrac{n_S}{n_E}=\dfrac{20}{8\ 000}=\dfrac{1}{400}=0,0025=0,25\%$		
+	\end{corrBox}
+	\item Calculer $n_S$ lorsque $p = 0,12$ et $n_E= 5\ 000$.
+	\begin{corrBox}
+		$p=\dfrac{n_S}{n_E} \iff n_S=p\times n_E=5\ 000\times 0,12=5\ 000\times 0,1+2\times 5\ 000\times 0,01=500+2\times 50=600$		
+	\end{corrBox}
+	\item Calculer $n_E$ lorsque $p = 0,30$ et $n_S = 900$.
+	\begin{corrBox}
+		$p=\dfrac{n_S}{n_E} \iff n_E=\dfrac{n_S}{p}=\dfrac{900}{0,3}=\dfrac{9\ 000}{3}=3\ 000$		
+	\end{corrBox}
+	\item Sachant que $30 \%$ d'une somme $S$ vaut $1\ 500$ \EUR{}, calculer $S$.
+	\begin{corrBox}
+		$S=\dfrac{100\times 1\ 500}{30}=\dfrac{10\times 1\ 500}{3}=10\times 500=5\ 000$		
+	\end{corrBox}
+\end{enumMet}
+
+\exerciceDS{ $-$ Taux d'évolution entre $Q_{1}$ et $Q_{2}$ $-$ 4 points}
+Dans chacun des cas suivants , calculer l'un des trois nombres $Q_{1}, Q_{2}$ ou $t$, connaissant les deux autres. De plus donnner le taux d'évolution sous forme de pourcentage et indiquer s'il s'agit d'une baisse ou d'une hausse.
+%	\begin{multicols}{2}
+		\begin{enumMet}
+		\item $Q_{1}=5 ; Q_{2}=3$.
+		\begin{corrBox}
+			$t=\dfrac{Q_2-Q_1}{Q_1}=\dfrac{3-5}{5}=-0,4=-40\ \%$. Il s'agit d'une baisse car $t<0$.
+		\end{corrBox}
+		\item $Q_{1}=10 ; Q_{2}=13$.
+		\begin{corrBox}
+			$t=\dfrac{Q_2-Q_1}{Q_1}=\dfrac{13-10}{10}=0,3=30\ \%$. Il s'agit d'une hausse car $t>0$.
+		\end{corrBox}
+		\item $Q_{1}=20 ; t=-0,20$.
+		\begin{corrBox}
+			$t=\dfrac{Q_2-Q_1}{Q_1} \iff Q_2=(1+t)Q_1=20\times 0,8=2\times 8=16$. Il s'agit d'une baisse car $t<0$.
+		\end{corrBox}
+		\item $Q_{2}=160 ; t=0,6$.
+		\begin{corrBox}
+			$t=\dfrac{Q_2-Q_1}{Q_1} \iff Q_1=\dfrac{Q_2}{1+t}=\dfrac{160}{1,6}=100$. Il s'agit d'une hausse car $t>0$.
+		\end{corrBox}
+	\end{enumMet}
+%	\end{multicols}
+
+\exerciceDS{$-$ 2 points}
+
+Compléter les phrases suivantes.
+\begin{multicols}{2}
+	\begin{enumMet}
+	\item Augmenter de $40 \%$, c'est multiplier par \phantom{$\dfrac{1}{1}$}$\mRouge{1,4}$
+	\item Diminuer de $30 \%$, c'est multiplier par \phantom{$\dfrac{1}{1}$}$\mRouge{0,7}$
+	\item Multiplier par 5 c'est augmenter de \phantom{$\dfrac{1}{1}$}$\mRouge{400}$\ \%.
+	\item Multiplier par 0,45 c'est diminuer de \phantom{$\dfrac{1}{1}$}$\mRouge{55}$\ \%.	
+\end{enumMet}
+\end{multicols}
+
+\exerciceDS{ $-$ 4,5 points}
+
+\begin{enumMet}
+	\item Une personne paie, pour un groupe, une note de restaurant qui s'élève à 240 \EUR{}, avec le service compris de $20 \%$. Quel est le prix des repas sans le service?
+	\begin{corrBox}
+		$t=20\ \%=0,2\longrightarrow c=1+0,2=1,2$ d'ou $prix=\dfrac{240}{1,2}=200$ \EUR{}		
+	\end{corrBox}
+	\item Un commerçant calcule ses prix de vente en prenant un bénéfice de $20 \%$ sur ses prix d'achat. Quel est le prix d'achat d'un article qu'il a vendu $480$\EUR{}.
+	\begin{corrBox}
+		$t=20\ \%=0,2\longrightarrow c=1+0,2=1,2$ d'ou $prix=\dfrac{480}{1,2}=400$ \EUR{}		
+	\end{corrBox}
+	\item Le prix d'un article soldé est de $140$ \EUR{}. L'étiquette indique \guillemets{$-30 \%$}. Calculer le prix de l'article avant les soldes.
+	\begin{corrBox}
+		$t=-30\ \%=-0,3\longrightarrow c=1-0,3=0,7$ d'ou $prix=\dfrac{140}{0,7}=\dfrac{1\ 400}{7}=\dfrac{14}{7}\times 100=200$ \EUR{}		
+	\end{corrBox}
+\end{enumMet}
+
+
+\end{document}
+

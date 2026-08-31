@@ -1,0 +1,183 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{\textcolor{red}{Correction - DM n$^{\circ}01$ - Croissance linéaire} - 02/05/2023}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+	
+	\begin{center}
+		
+		
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						\textcolor{red}{Correction -DM n$^{\circ}01$ \\
+						Croissance linéaire} 
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+%\begin{center}1h20min - Barème indicatif\\
+%%\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\\
+%Calculatrice autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés)
+%\end{center}
+
+
+\exerciceDS{ - (2 points)}
+Les situations suivantes sont à croissance linéaire.
+\begin{enumMet}
+	\item Dans un élevage de chèvres, la population au cours de quatre mois consécutifs s'élève à 76, puis 70 , puis 64 , puis 58 chèvres.
+	Combien y a-t-il de chèvres le mois suivant ? \corr{$58-6=52$}
+	\item La quantité d'eau dans un pluviomètre lors d'un orage est relevée toutes les dix minutes. Les valeurs relevées sont $15 \mathrm{~mm} ; 19 \mathrm{~mm} ; 23 \mathrm{~mm} ; 27 \mathrm{~mm}$.\\
+	Quelle valeur est relevée dix minutes plus tard? \corr{$27+4=31$}
+\end{enumMet}
+
+\exerciceDS{ - (2 points)}
+Pour chacune de ces suites arithmétiques définies sur $\mathbb{N}$, calculer $u(10)$.
+\begin{multicols}{2}
+	\begin{enumMet}
+	\item $u(n)=5 n-12$
+	\begin{corrBox}
+		$u(10)=5\times 10-12=38$	
+	\end{corrBox}
+	\columnbreak
+	\item $u(n)=\dfrac{4 n+7}{3}$
+	\begin{corrBox}
+		$u(10)=\dfrac{4\times10+7}{3}=\dfrac{47}{3}$	
+	\end{corrBox}
+\end{enumMet}
+\end{multicols}
+
+\exerciceDS{ - (2 points)}
+Dans chaque cas, $u$ est une suite arithmétique de raison $r$ et de premier terme $u(0)$. Calculer le terme de rang 5 .
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $r=-7$ et $u(0)=3$.
+		\begin{corrBox}
+			$u(n)=u(0)+r\times n=3-7n$\\
+			$u(4)=3-7\times 4=-25$	
+		\end{corrBox}
+		\columnbreak
+		\item $r=-1,2$ et $u(0)=5,6$.
+		\begin{corrBox}
+			$u(n)=u(0)+r\times n=5,6-1,2n$\\
+			$u(4)=5,6-1,2\times 4=0,8$	
+		\end{corrBox}
+	\end{enumMet}
+\end{multicols}
+
+\exerciceDS{ Impots sur le revenu- (4 points)}
+
+\begin{consequences}{Doc. 1 - Informations sur la famille Pairon}
+	La famille Pairon a deux enfants.
+	En 2021, le premier parent a gagné $2\ 150$ \EUR{} imposables par mois et le second $2\ 270$ \EUR{}, auxquels se sont ajoutés $1\ 500$ \EUR{} de prime annuelle imposable.
+\end{consequences}
+\ \\
+
+\begin{consequences}{Doc. 2 - Nombre de parts et quotient familial}
+	Selon le nombre d'enfants, la \grasInMet{part fiscale} de la famille n'est pas la même. Pour obtenir le \grasInMet{quotient familial}, qui sert à calculer le montant de l'impôt sur le revenu, on divise le revenu total imposable par le nombre de parts.\\
+	\begin{center}
+		Nombre de parts de quotient familial pour un couple soumis à déclaration commune\\
+%		\begin{tabular}{|Xc|Xc|}
+%			\hline Nombre d'enfant(s) & Nombre de parts \\
+%			\hline 0 & 2 \\
+%			\hline 1 & 2,5 \\
+%			\hline 2 & 3 \\
+%			\hline 3 & 4 \\
+%			\hline 4 & 5 \\
+%			\hline Par enfant supplémentaire & 1 \\
+%			\hline
+%		\end{tabular}
+	\end{center}
+\end{consequences}
+\vspace*{-0.2cm}
+\ \\
+\begin{consequences}{Doc. 3 - Barème d'imposition}
+	\begin{center}
+		Barème progressif applicable aux revenus de 2021\\
+%		\begin{tabular}{|Xc|Xc|}
+%			\hline Tranches & $\begin{array}{c}\text { Taux d'imposition à } \\
+%				\text { appliquer sur la tranche } \\
+%				\text { correspondante (ou tranche } \\
+%				\text { marginale d'imposition) }\end{array}$ \\
+%			\hline Jusqu'à $10\ 225$ \EUR{} & $0 \%$ \\
+%			\hline De $10\ 226$ \EUR{} à $26\ 070$ \EUR{} & $11 \%$ \\
+%			\hline De $26\ 071$ \EUR{} à $74\ 545$ \EUR{} & $30 \%$ \\
+%			\hline De $74\ 546$ \EUR{} à $160\ 336$ \EUR{} & $41 \%$ \\
+%			\hline Plus de $160\ 336$ \EUR{} & $45 \%$ \\
+%			\hline
+%		\end{tabular}
+	\end{center}
+\end{consequences}
+
+\vspace*{-0.2cm}
+\ \\
+\begin{consequences}{Doc. 4 - Exemple de calcul}
+	Pour un couple marié ou pacsé sans enfants (foyer de 2 parts) ayant perçu un revenu net imposable de $60\ 000$ \EUR{}. Son quotient familial est de $60\ 000 \div 2=30\ 000$ \EUR{}. Pour le calcul de son impôt :
+	\begin{itemMet}
+		\item jusqu'à $10\ 225$ \EUR{}$: 0 \%$
+		\item de $10\ 226$ \EUR{} à $26\ 070$ \EUR{}$:(26\ 070-10\ 225) \times 11 \%=15\ 845 \times 11 \%=1\ 742,95$ \EUR{};
+		\item de $26\ 071$ \EUR{} à $30\ 000$ \EUR{}$:(30\ 000 €-26\ 070 €) \times 30 \%=3\ 930\times 30 \%=1\ 179$ \EUR{}.
+	\end{itemMet}
+	L'impôt brut de chaque membre du couple est de : $0+1\ 742,95+1\ 179=2\ 921,95$ \EUR{}.
+	Cet impôt doit ensuite être multiplié par le nombre de parts du foyer fiscal. Dans cet exemple, il sera multiplié par 2 puisqu'il s'agit d'un couple marié ou pacsé. Le couple devra donc payer un impôt de $2\ 921,95 \times 2$, soit $5\ 843,90$ \EUR{}.
+\end{consequences}
+
+\begin{enumMet}
+	\item \begin{enumMet}
+		\item Montrer que pour l'année 2021, la famille Pairon va payer $2\ 625,15$ \EUR{} d'impôt sur le revenu.
+		\begin{corrBox}
+			revenu famille$=2150\times 12+2270\times 12+1500=54540$.\\
+			quotient familial=$\dfrac{54540}{3}=18180$\\
+			impot net$=(18180-10225)\times 11\%\times 3=2\ 625,15$	
+		\end{corrBox}
+		\item Quelle est la proportion de l'impôt payé par rapport aux revenus totaux ? Cette proportion s'appelle le taux d'imposition moyen.
+		\begin{corrBox}
+			taux d'imposition moyen$=\dfrac{2\ 625,15}{54540}\times 100=4,81\%$	
+		\end{corrBox}
+	\end{enumMet}
+	\item En 2022, les revenus de la famille Pairon ont beaucoup augmenté. Le premier parent a gagné $3\ 000$ \EUR{} imposables par mois et le second $3\ 300$ \EUR{}. De plus, une prime annuelle de $6\ 300$ \EUR{} s'est ajoutée à ces revenus imposables.
+	\begin{enumMet}
+		\item Calculer le montant de l'impôt sur le revenu que la famille Pairon devra payer pour l'année 2022.
+		\begin{corrBox}
+			revenu famille$=3000\times 12+3300\times 12+6300=81900$.\\
+			quotient familial=$\dfrac{81900}{3}=27300$\\
+			impot brut$=(26070-10225)\times 11\%+(27300-26070)\times 30\%=1\ 742,95+369=2111,95$\\
+			impot net=$2111,95\times 3=6335,85$	
+		\end{corrBox}
+		\item En déduire le taux d'imposition moyen.
+		\begin{corrBox}
+			taux d'imposition moyen$=\dfrac{6335,85}{81900}\times 100=7,73\%$	
+		\end{corrBox}
+	\end{enumMet}
+\end{enumMet}
+
+
+\end{document}
+

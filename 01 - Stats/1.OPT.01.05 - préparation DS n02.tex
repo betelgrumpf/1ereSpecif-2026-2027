@@ -1,0 +1,192 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{Préparation DS n$^{\circ}02$ - Statistiques - 18/11/2024}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+	
+	\begin{center}
+		
+		
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						DS n$^{\circ}01$ \\
+						Statistiques 
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+\begin{center}\textbf{1h20min - Barème indicatif}\end{center}
+\begin{center}\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\end{center}
+\begin{center}\textbf{Calculatrice autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+\exerciceDS{ - (5 points)}
+%environ 15-20 min
+Le gérant d'une librairie spécialisée dans la bande dessinée souhaite réaliser un bilan annuel de ses ventes. Il a regroupé certaines informations dans le tableau suivant:\\
+\begin{tabular}{|Xc|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 5 } \multicolumn{1}{c|}{} & BD européenne & Comics & Manga & Total \\
+	\hline 1er semestre & 13 100 & 16 700 &  & 52 500 \\
+	\hline 2nd semestre & 9 100 &  & 9 300 &  \\
+	\hline Total &   &   &   & 75 000 \\
+	\hline
+\end{tabular}
+\begin{enumMet}
+	\item Interpréter les nombres 75 000, 52 500 et 9 300 dans le contexte de cet exercice.
+	\item Compléter ce tableau.
+\end{enumMet}
+
+%\exerciceDS{ - (5 points)}
+%Le tableau suivant correspond au bilan journalier des ventes de tickets dans un cinéma.\\
+%\begin{tabular}{|Xc|Xc|Xc|Xc|}
+%	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Femmes & Hommes & Total \\
+%	\hline Enfants (- de 18 ans) & 220 & 260 & 480 \\
+%	\hline Adultes & 320 & 550 & 870 \\
+%	\hline Seniors (+ de 65 ans) & 420 & 630 & 1050 \\
+%	\hline Total & 960 & 1440 & 2400 \\
+%	\hline
+%\end{tabular}
+%\begin{enumMet}
+%	\item \begin{enumMet}
+%		\item Donner l'effectif total de cette population.
+%		\item Quel est l'effectif marginal des femmes ?
+%	\end{enumMet}
+%	\item Quel est l'effectif des hommes adultes venus au cinéma ce jour-là?
+%	\item Interpréter dans le contexte de l'exercice :
+%	\begin{enumMet}
+%		\item le nombre 480 ;
+%		\item le nombre 420.
+%	\end{enumMet}
+%\end{enumMet}
+
+\exerciceDS{  \ding{46} - (2 points)}
+Le service d'intendance met à jour les fiches des 150 élèves de première générale d'un lycée. 95 élèves sont externes, 31 élèves participent au dispositif \guillemets{petit déjeuner} et 48 élèves sont demi-pensionnaires et ne participent pas à ce dispositif. Compléter le tableau ci-dessous.\\
+\begin{tabular}{|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Demi-pensionnaire & Externe & Total \\
+	\hline Participe au dispositif &   &   &   \\
+	\hline Ne participe pas au dispositif &   &   &   \\
+	\hline Total &   &   &   \\
+	\hline
+\end{tabular}
+
+\exerciceDS{  - (4 points)}
+Le tableau ci-dessous donne l'origine de l'électricité qui a été consommée en France le dimanche 11 décembre 2022 de 13 h à 14 h selon RTE.
+
+\begin{tabular}{|Xc|Xc|Xc|}
+	\hline Origine & \begin{tabular}{Xc} 
+		Consommation \\
+		(en Mégawatt)
+	\end{tabular} & Angle \\
+	\hline Import & 5 646 & \\
+	\hline Fossile & 9 122 & \\
+	\hline Renouvelable & 11 150 & \\
+	\hline Nucléaire & 40 368 & \\
+	\hline Total & 66 286 & $360^\circ$\\
+	\hline
+\end{tabular}
+
+Compléter le tableau et représenter ces données par un diagramme circulaire.
+
+\newpage
+
+\exerciceDS{ - (6 points)}
+Le diagramme circulaire ci-dessous donne la répartition des 17700 surfeurs licenciés en France pour la saison 2019-2020.
+
+\begin{minipage}[c]{0.4\linewidth}
+	\begin{center}
+		\includegraphics[scale=0.45]{DS_img01}
+	\end{center}
+\end{minipage} \hfill
+\begin{minipage}[c]{0.6\linewidth}
+	\begin{enumMet}
+		\item La Fédération Française de Surf annonce que la majorité des licenciés sont des jeunes (moins de 18 ans). A-t-elle raison ? Justifier.
+		\item Quel pourcentage des licenciés représentent les femmes adultes ?
+		\item Calculer le nombre de garçons de moins de 12 ans.
+		\item Établir un tableau croisé d'effectifs décrivant la répartition des licenciés selon leur genre et leur âge. 
+	\end{enumMet}
+\end{minipage}
+
+
+
+%\newpage
+
+
+\exerciceDS{ - (5 points)}
+Le tableau ci-dessous représente le pourcentage de différents usages d'Internet selon la tranche d'âge entre 2017 et 2021.\\
+\begin{tabular}{|Xc|Xc|Xc|Xc|}
+	\hline Tranche d'âge & $16-24$ ans & $25-64$ ans & $65-74$ ans \\
+	\hline Journaux & 63 & 61 & 41 \\
+	\hline Jeux en ligne ou téléchargés & 53 & 28 & 13 \\
+	\hline Radios en ligne, musique en streaming & 82 & 51 & 18 \\
+	\hline Vidéos ou télévision sur Internet & 89 & 55 & 25 \\
+	\hline Voyages et hébergement & 41 & 46 & 30 \\
+	\hline
+\end{tabular}\\
+Représenter les données du tableau à l'aide d'un diagramme en barres.
+
+\exerciceDS{ Lancers francs au basketball - (8 points)}
+
+Line et Basil s'affrontent aux lancers francs.
+Le gagnant est celui qui aura le meilleur taux de succès sur l'ensemble de ses tentatives. Voici les résultats obtenus lors de deux manches.
+
+\begin{tabular}{|Xc|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 5 }
+	\multicolumn{1}{l|}{ } & \multicolumn{2}{c}{ Manche 1 } & \multicolumn{2}{c}{ Manche 2 }  \\
+	\cline { 2 - 5 } \multicolumn{1}{l|}{ }  & Basil & Line & Basil & Line \\
+	\hline Succès & 30 & 10 & 3 & 4 \\
+	\hline Échecs & 20 & 6 & 17 & 16 \\
+	\hline
+\end{tabular}\\
+
+
+On souhaite déterminer qui a gagné à partir de ces deux séries de lancers.
+\begin{enumMet}
+	\item \begin{enumMet}
+		\item Calculer le taux de succès de chacun d'entre eux lors de la manche 1.
+		\item Calculer de même le taux de succès de chacun lors de la manche 2 .
+		\item Qui a remporté chacune des manches?
+	\end{enumMet}
+	\item \begin{enumMet}
+		\item \ding{46} Compléter le tableau suivant sur l'ensemble des deux manches.
+		
+		\begin{tabular}{|l|l|l|}
+			\cline { 2 - 3 } \multicolumn{1}{c|}{} & Basil & Line \\
+			\hline Succès & & \\
+			\hline Échecs & & \\
+			\hline
+		\end{tabular}
+		\item \ding{46} Calculer le taux de succès de chacun sur l'ensemble des deux manches.
+		\item \ding{46} Qui a gagné sur le cumul des deux manches
+	\end{enumMet}
+	\item \ding{46} Que peut-on observer ? Expliquer.
+\end{enumMet}
+
+\end{document}
+

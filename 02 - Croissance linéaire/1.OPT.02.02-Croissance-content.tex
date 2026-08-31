@@ -1,0 +1,231 @@
+\chapter{Croissance linéaire}
+\thispagestyle{fancy}
+
+\section{Suites arithmétiques}
+
+\begin{bdefi}
+	Une \grasInDef{suite} $u$ est une fonction dont la variable, notée $n$ plutôt que $x$, est un entier naturel. Le nombre $u(n)$ est appelé le \grasInDef{terme de rang $\boldsymbol{n}$} de la suite $u$.
+\end{bdefi}
+
+\begin{bdefis}
+	Une suite $u$ est \grasInDef{arithmétique} lorsqu'il existe un nombre réel $r$, nommé \grasInDef{raison}, tel que pour tout entier naturel $n: u(n+1)=u(n)+r$. L'écriture du terme de rang $n+1$ en fonction du terme de rang $n$ donne une \grasInDef{relation de récurrence} vérifiée par la suite.
+\end{bdefis}
+
+\begin{bexemple}
+Une suite $u$ vérifiant, pour tout entier naturel $n, u(n+1)=u(n)+4$ est une suite arithmétique. Si on a $u(0)=5$, alors le deuxième terme est $u(1)=u(0)+4=5+4=9$. Le troisième terme est $u(2)=u(1)+4=9+4=13$.\\
+Attention, le premier terme de la suite étant $u(0)$, le dixième terme est $u(9)$.
+\end{bexemple}
+
+\begin{bprop}
+	Une suite $u$ est une suite arithmétique de raison $r$ et de premier terme $u(0)$ si, et seulement si, pour tout entier naturel $n, u(n)=r \times n+u(0)$. Cette écriture est la \grasInDef{forme explicite} de la suite $u$.
+\end{bprop}
+
+\begin{bprop}
+	Dans un repère, une suite peut être représentée par le nuage de points de coordonnées $(n ; u(n)), n \in \mathbb{N}$. Dans le cas d'une suite arithmétique, ce nuage de points forme un ensemble de points alignés.
+\end{bprop}
+
+\begin{bexemple}
+	\begin{multicols}{2}
+		
+		
+		Soit $u$ une suite arithmétique de premier terme $u(0)=2$ et de raison 3 . Elle est donc définie par la relation de récurrence $u(n+1)=u(n)+3$.\\
+		\ \\
+		Sa forme explicite est donnée, pour tout entier naturel $n$, par $u(n)=3 n+2$. Ainsi, $u(1)=3 \times 1+2=5$, $u(2)=3 \times 2+2=8$ et $u(3)=3 \times 3+2=11$.\\
+		\ \\
+		Les quatre premiers termes de cette suite sont représentés dans le graphique ci-contre.
+		Ils sont alignés sur la droite d'équation $y=3 x+2$.
+		
+		\begin{center}
+			\includegraphics[scale=0.7]{1.OPT.03.02-Img01}
+		\end{center}
+	\end{multicols}
+\end{bexemple}
+
+\begin{brmq}
+	Une suite arithmétique permet de modéliser un phénomène \grasInRem{discret à croissance linéaire}.
+\end{brmq}
+
+\begin{bprops}
+	\begin{enumProp}
+		\item Une suite arithmétique $u$ de raison $r$ est strictement croissante si, et seulement si, $r>0$.
+		\item Une suite arithmétique $u$ de raison $r$ est strictement décroissante si, et seulement si, $r<0$.
+		\item Une suite arithmétique $u$ de raison $r$ est constante si, et seulement si, $r=0$.
+	\end{enumProp}
+\end{bprops}
+
+\begin{bmethodet}{Exploiter la représentation graphique d'une suite arithmétique}
+	\begin{itemMet}
+		\item On détermine la valeur de $u(0)$.
+		\item On calcule $r$ en déterminant l'écart $u(n+1)-u(n)$ entre deux valeurs consécutives.
+		\item On donne la forme explicite de la suite.
+	\end{itemMet}
+\end{bmethodet}
+
+\begin{bexemple}
+	\begin{multicols}{2}
+		Soit $u$ une suite arithmétique dont voici la représentation graphique. Déterminer le premier terme et la raison de $u$. En déduire, pour tout entier naturel $n$, une expression de $u(n)$ en fonction de $n$.
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{1.OPT.03.02-Img05}
+		\end{center}
+	\end{multicols}
+	\grasInEx{Solution :}\\
+	D'après le graphique, le premier terme est $u(0)=0,2$.\\
+	On choisit deux termes consécutifs, par exemple $u(3)=1,4$ et $u(4)=1,8$, puis on calcule la raison: $r=u(4)-u(3)=0,4$.\\
+	Pour tout entier naturel $n$, on a $u(n)=r \times n+u(0)=0,4 \times n+0,2$.
+\end{bexemple}
+
+\begin{bmethodet}{Calculer les termes d'une suite arithmétique}
+	\begin{itemMet}
+		\item Deux méthodes sont possibles pour calculer les termes d'une suite arithmétique.
+		\item Cas d'une relation de récurrence.
+		\begin{itemMet}
+			\item On utilise la formule $u(n+1)=u(n)+r$.
+			\item On calcule les termes successifs pour déterminer la valeur de $u(n)$ souhaitée.
+		\end{itemMet}
+		\item Cas d'une forme explicite.
+		\begin{itemMet}
+			\item On utilise la relation: $v(n)=r \times n+v(0)$.
+			\item On remplace $n$ par la valeur souhaitée.
+		\end{itemMet}
+	\end{itemMet}
+\end{bmethodet}
+
+\begin{bexemple}
+	\grasInEx{Exemple 1.} On donne une suite arithmétique $u$ de raison $r=3$ telle que $u(6)=-4$. Calculer le terme de rang 8.\\
+	\grasInEx{Exemple 2.} Tao possède six cartes Pokémon et décide d'agrandir sa collection. Chaque semaine, il achète trois nouvelles cartes sur un site de vente en ligne.
+	On note $v(n)$ le nombre de cartes Pokémon possédées par Tao après $n$ semaines écoulées.
+	\begin{enumEx}
+		\item Justifier que $v$ est une suite arithmétique dont on précisera la raison et le premier terme $v(0)$.
+		\item Calculer $v(5)$. Interpréter ce résultat dans le cadre de l'exercice.
+	\end{enumEx}
+	\ \\
+	\grasInEx{Solution :}\\
+	\grasInEx{Exemple 1.}  Pour tout e ntier naturel $n$, on a $u(n+1)=u(n)+3$.\\
+	Donc $u(7)=u(6)+3=-4+3=-1$ et $u(8)=u(7)+3=-1+3=2$.\\
+	\grasInEx{Exemple 2.}
+	\begin{enumEx}
+		\item D'une semaine à l'autre, le nombre de cartes Pokémon augmente de trois unités. Donc $v(n+1)=v(n)+3$. Ainsi, la suite $v$ est une suite arithmétique de premier terme $v(0)=6$ et de raison $r=3$
+		\item Puisque $r=3$ et $v(0)=6$, pour tout entier naturel $n$, on a donc $v(n)=3 n+6$, d'où $v(5)=3 \times 5+6=21$.
+		Tao possédera donc 21 cartes Pokémon au bout de cinq semaines.
+	\end{enumEx}
+\end{bexemple}
+
+\begin{bmethodet}{Déterminer un seuil par le calcul}
+	\begin{itemMet}
+		\item On résout l'inéquation demandée.
+		\item On donne la valeur du seuil demandé en donnant un nombre entier naturel (arrondir en conséquence).
+	\end{itemMet}
+\end{bmethodet}
+
+\begin{bexemple}
+	Soit $u$ la suite arithmétique définie, pour tout entier naturel $n$, par $u(n)=5-3 n$. Déterminer la plus petite valeur de $n$ à partir de laquelle $u(n) \leqslant-12$.
+	\ \\
+	\grasInEx{Solution :}\\
+	On résout l'inéquation $u(n) \leqslant-12$.\\
+	$u(n) \leqslant-12 \Leftrightarrow 5-3 n \leqslant-12 \Leftrightarrow-3 n \leqslant-17 \Leftrightarrow n \geqslant \dfrac{-17}{-3} \Leftrightarrow n \geqslant \dfrac{17}{3}$.\\
+	Or $\frac{17}{3} \approx 5,7$. Puisque $n$ est un entier et $n \geqslant 5,7$, on a donc $n=6$.\\
+	La plus petite valeur de $n$ à partir de laquelle $u(n) \leqslant-12$ est 6 .\\
+	Autrement dit, à partir de $n=6, u(n) \leqslant-12$.
+\end{bexemple}
+
+\section{Fonctions affines}
+
+\begin{bdefi}
+	Une fonction $f$ est dite \grasInDef{affine} lorsqu'il existe deux réels $m$ et $p$ tels que, pour tout $x \in \mathbb{R}, f(x)=m x+p$.
+	La représentation graphique d'une fonction affine dans un repère du plan est une droite dont $m$ est le \grasInDef{coefficient directeur} et $p$ est \grasInDef{l'ordonnée à l'origine}. \\
+	On a $p=f(0)$.
+\end{bdefi}
+
+\begin{brmq}
+	Une fonction affine permet de modéliser un phénomène \grasInRem{continu à croissance linéaire}.
+\end{brmq}
+
+\begin{bprops}
+	Proprietés
+	Soit $f: x \mapsto m x+p$ une fonction affine dont on note $d$ la droite représentative.
+	\begin{enumDef}
+		\item Pour tous réels distincts $a$ et $b$, on a $m=\dfrac{f(b)-f(a)}{b-a}$.
+		\item Pour tous points distincts $\mathrm{A}\left(x_{\mathrm{A}} ; y_{\mathrm{A}}\right)$ et $\mathrm{B}\left(x_{\mathrm{B}} ; y_{\mathrm{B}}\right)$ appartenant à $d$, on a $m=\dfrac{y_{\mathrm{B}}-y_{\mathrm{A}}}{x_{\mathrm{B}}-x_{\mathrm{A}}}$.
+	\end{enumDef}
+\end{bprops}
+
+\begin{bprops}
+	\begin{enumProp}
+		\item Une fonction affine $f$ est strictement croissante sur $\mathbb{R}$ si, et seulement si, $m>0$.
+		\item Une fonction affine $f$ est strictement décroissante sur $\mathbb{R}$ si, et seulement si, $m<0$.
+		\item Une fonction affine $f$ est constante sur $\mathbb{R}$ si, et seulement si, $m=0$.
+	\end{enumProp}
+\end{bprops}
+
+\begin{bmethodet}{Exploiter la représentation graphique d'une fonction affine}
+	\begin{itemMet}
+		\item On détermine l'ordonnée à l'origine de la droite puis on calcule le coefficient directeur à l'aide de la formule $\dfrac{y_{\mathrm{B}}-y_{\mathrm{A}}}{x_{\mathrm{B}}-x_{\mathrm{A}}}$ en choisissant deux points distincts de cette droite.
+		\item On repère si la variable est un nombre réel ou un nombre entier pour savo ir si on modélise la situation par une fonction ou une suite.
+		\item On réalise une lecture graphique en repérant les grandeurs sur les bons axes.
+	\end{itemMet}
+\end{bmethodet}
+
+\begin{bexemple}
+	\begin{multicols}{2}
+		\begin{enumEx}
+			\item Soit $f$ une fonction affine dont voici la droite représentative $C_f$.\\
+			D'après ce graphique, déterminer l'expression de $f(x)$ en fonction du réel $x$.
+			\item Après s'être échauffée sur $1 \mathrm{~km}$, Clara active son chronomètre. Elle court alors à $8 \mathrm{~km} / \mathrm{h}$ et souhaite calculer sa distance totale parcourue à chaque instant. On admet que $f(x)$ est la distance totale parcourue par Clara lorsque le chronomètre indique qu'elle a couru $x$ heures.
+			\begin{enumEx}
+				\item Justifier le choix de modéliser cette situation par une fonction.
+				\item Par lecture graphique, déterminer, en minute, le temps nécessaire à Clara pour parcourir au total $5 \mathrm{~km}$.
+			\end{enumEx}
+		\end{enumEx}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{1.OPT.03.02-Img06}
+		\end{center}
+	\end{multicols}
+	\grasInEx{Solution :}\\
+	\begin{enumEx}
+		\item Par lecture graphique, l'ordonnée à l'origine vaut $p=1$. On considère les points $\mathrm{A}(0 ; 1)$ et $\mathrm{B}(1 ; 9)$ sur $C_f$. On calcule le coefficient directeur: $m=\dfrac{9-1}{1-0}$, d'où $m=8$. Ainsi, pour tout réel $x, f(x)=8 x+1$.
+		\item  \begin{enumEx}
+			\item Le temps écoulé est un nombre réel donc on représente la situation par une fonction. Une suite ne peut pas convenir car une suite n'est définie que pour les entiers naturels.
+			\item Par lecture graphique, il faut 0,5 heure à Clara pour parcourir $5 \mathrm{~km}$, soit 30 minutes.
+		\end{enumEx}
+	\end{enumEx}
+\end{bexemple}
+
+\begin{bmethodet}{Déterminer une équation réduite de droite dont on connaît deux points}
+	\grasInMet{Énoncé :}\\
+	Soit \Rij un repère du plan. Soit A\coord{4}{-1} et B\coord{3}{5} deux points d'une droite $d$.
+	Déterminer une équation de la droite $d$.\\
+	\ \\
+	\grasInMet{Réponse :}\\
+	Les points A et B sont d'abscisses différentes donc la droite $d$ n'est pas parallèle à l'axe des ordonnées.\\ Elle est donc de la forme $y = mx + p$, où $m$ et $p$ sont deux nombres réels.\\
+	Le coefficient directeur de $d$ est $m =  \dfrac{y_B-y_A}{x_B-x_A}=\dfrac{5-(-1)}{3-4}=\dfrac{6}{-1} = -6$.\\
+	L'équation de $d$ est donc de la forme : $y = -6x + p$\\
+	\grasInMet{Soit :}\\
+	Comme A\coord{4}{-1} appartient à la droite $d$, ses coordonnées vérifient l'équation de $d$ soit :\\
+	$-1 = -6 \times 4 + p$. D'où  $p = -1 + 6 \times 4 = 23$\\
+	\grasInMet{Soit :}\\
+	Comme A\coord{3}{5} appartient à la droite $d$, ses coordonnées vérifient l'équation de $d$ soit :\\
+	$5 = -6 \times 3 + p$. D'où  $p = 5 + 6 \times 3 = 23$\\
+	\ \\
+	Une équation de $d$ est donc :  $y = - 6x + 23$.
+\end{bmethodet}
+
+\section{Modèle linéaires discrets et continus}
+
+\setlength{\arrayrulewidth}{1pt}
+\makeatletter
+\newcommand\justify{%
+	\let\\\@centercr
+	\rightskip\z@skip
+	\leftskip\z@skip}
+\makeatother
+\begin{tabular}{|>{\justify}p{3cm}| >{\justify}p{6cm} | >{\justify}p{6cm} |}
+	\hline
+	\cellcolor{cyan!25!white}Modèle  & Discret
+	& Continu\tabularnewline \hline
+	\cellcolor{cyan!25!white}Modélisation & Suite arithmétique $u$ définie sur $\mathbb{N}$. & Fonction affine $f$ définie sur $\mathbb{R}$.\tabularnewline \hline
+	\cellcolor{cyan!25!white}Expression & $u(n)=r n+u(0) \text { avec } n \in \mathbb{N}$. & $f(x)=m x+p=m x+f(0)$ avec $x \in \mathbb{R}$. \tabularnewline \hline
+	\cellcolor{cyan!25!white}Représentation\\ graphique & Nuage de points alignés\newline \includegraphics[scale=0.6]{1.OPT.03.02-Img03} & Droite\newline \includegraphics[scale=0.6]{1.OPT.03.02-Img04} \tabularnewline \hline
+	\cellcolor{cyan!25!white}Caractérisation & Pour tout $n \in \mathbb{N}, u(n+1)-u(n)$ est constant.  & Pour tous réels $a$ et $b$ distincts, $\dfrac{f(b)-f(a)}{b-a}$ est constant. \tabularnewline \hline
+\end{tabular}

@@ -1,0 +1,114 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{DS n$^{\circ}02$ $-$ Automatismes $-$ 05/11/2025}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+	
+	\noindent Nom: ${\scriptstyle  .........................................................}$ \hskip 1.8cm Prénom: ${\scriptstyle  ...................................................}$ 
+	
+	\vspace{.5cm}
+	
+	\begin{center}
+		
+		
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						05/11/2025 $-$ DS n$^{\circ}02$ $-$ Automatismes\\
+						Proportion et pourcentage 
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+\begin{center}\textbf{55min - Barème indicatif}\end{center}
+\begin{center}\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\end{center}
+\begin{center}\textbf{Calculatrice non autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+
+\exerciceDS{(Calculer un pourcentage) $-$ 6 points}
+
+Calculer:
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $25\ \%$ de $300$ ;
+		\item \ding{46} $30\ \%$ de $220$;
+		\item $0,5\ \%$ de $64\ 400$;
+		\item $140\ \%$ de $20$.
+		\item $5\ \%$ de $380$.
+		\item $13\ \%$ de $500$.
+	\end{enumMet}
+\end{multicols}
+
+\exerciceDS{(Calculer une proportion ou un effectif) $-$ 5 points}
+\begin{enumMet}
+	\item Calculer $p$ lorsque $n_S = 300$ et $n_E = 1\ 500$.\\
+	Écrire le résultat sous la forme d'un pourcentage.
+	\item \ding{46} Calculer $p$ lorsque $n_S = 30$ et $n_E= 9\ 000$.\\
+	Écrire le résultat sous la forme d'un pourcentage.
+	\item Calculer $n_S$ lorsque $p = 0,12$ et $n_E= 5\ 000$.
+	\item Calculer $n_E$ lorsque $p = 0,30$ et $n_S = 180$.
+	\item Sachant que $30 \%$ d'une somme $S$ vaut $4\ 500$ \EUR{}, calculer $S$.
+\end{enumMet}
+
+\exerciceDS{ $-$ Taux d'évolution entre $Q_{1}$ et $Q_{2}$ $-$ 4 points}
+Dans chacun des cas suivants , calculer l'un des trois nombres $Q_{1}, Q_{2}$ ou $t$, connaissant les deux autres. De plus donnner le taux d'évolution sous forme de pourcentage et indiquer s'il s'agit d'une baisse ou d'une hausse.
+	\begin{multicols}{2}
+		\begin{enumMet}
+		\item \ding{46} $Q_{1}=4 ; Q_{2}=2$.
+		\item $Q_{1}=10 ; Q_{2}=14$.
+		\item $Q_{1}=30 ; t=-0,30$.
+		\item $Q_{2}=260 ; t=0,3$.
+	\end{enumMet}
+	\end{multicols}
+
+\exerciceDS{$-$ 2 points}
+
+Compléter les phrases suivantes.
+\begin{multicols}{2}
+	\begin{enumMet}
+	\item Augmenter de $35 \%$, c'est multiplier par \phantom{$\dfrac{1}{1}$}......
+	\item Diminuer de $25 \%$, c'est multiplier par \phantom{$\dfrac{1}{1}$}......
+	\item Multiplier par 6 c'est augmenter de \phantom{$\dfrac{1}{1}$}.......\%.
+	\item Multiplier par 0,55 c'est diminuer de \phantom{$\dfrac{1}{1}$}.......\%.	
+\end{enumMet}
+\end{multicols}
+
+\exerciceDS{ $-$ 4,5 points}
+
+\begin{enumMet}
+	\item Une personne paie, pour un groupe, une note de restaurant qui s'élève à 360 \EUR{}, avec le service compris de $20 \%$. Quel est le prix des repas sans le service?
+	\item \ding{46} Un commerçant calcule ses prix de vente en prenant un bénéfice de $10 \%$ sur ses prix d'achat. Quel est le prix d'achat d'un article qu'il a vendu $330$\EUR{}.
+	\item Le prix d'un article soldé est de $180$ \EUR{}. L'étiquette indique \guillemets{$-40 \%$}. Calculer le prix de l'article avant les soldes.
+\end{enumMet}
+
+
+\end{document}
+

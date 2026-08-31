@@ -1,0 +1,244 @@
+\chapter{Croissance exponentielle}
+\thispagestyle{fancy}
+
+\section{Suites géométriques}
+
+\subsection{Définition}
+
+\begin{definition}
+	Une suite $u$ est géométrique lorsqu'il existe un nombre réel $q$, nommé raison, tel que pour tout entier naturel $n: u(n+1)=q \times u(n)$
+\end{definition}
+
+\begin{remarque}
+	Dans ce chapitre, on se limite au cas où $u(0)>0$ et $q>0$.
+\end{remarque}
+
+\begin{exemple}
+	La suite $u$ définie par $u(0)=8$ et, pour tout entier naturel $n, u(n+1)=0,5 \times u(n)$ est une suite géométrique de premier terme 8 et de raison $q=0,5$.\\
+	On a $u(0)=8, u(1)=0,5 \times u(0)=4, u(2)=0,5 \times u(1)=2$, etc.
+\end{exemple}
+
+\begin{propriete}
+	Si $u$ est une suite géométrique de raison $q$ et de premier terme $u(0)$, alors pour tout entier naturel $n$ :
+	$$
+	u(n)=u(0) \times q^n
+	$$
+\end{propriete}
+
+\begin{exemple}
+	Soit $u$ la suite géométrique définie par $u(0)=10$ et vérifiant, pour to ut entier naturel $n, u(n+1)=8 \times u(n)$. On en déduit que, pour tout entier naturel $n, u(n)=10 \times 8^n$.
+\end{exemple}
+
+\subsection{Méthode : Calculer les premiers termes d'une suite géométrique}
+
+
+\begin{methode}
+	\begin{enumMet}
+		\item Si la suite est définie par récurrence :
+		\begin{itemMet}
+			\item on applique la relation de récurrence à $u(0)$ pour déterminer $u(1)$;
+			\item on applique la relation de récurrence à $u(1)$ pour déterminer $u(2)$, et ainsi de suite.
+		\end{itemMet}
+		\item Si la suite est définie explicitement, on remplace directement $n$ par le rang du terme que l'on souhaite calculer.
+	\end{enumMet}
+	
+\end{methode}
+
+\begin{exemple}
+	\begin{enumEx}
+		\item Déterminer les trois premiers termes de la suite géométrique $u$ définie par son premier terme $u(0)=7$ et la relation de récurrence, valable pour tout entier naturel $n, u(n+1)=0,5 \times u(n)$.
+		\item Calculer les trois premiers termes de la suite géométrique $v$ définie, pour tout $n \in \mathbb{N}$, par sa forme explicite $v(n)=3 \times 2^n$.
+	\end{enumEx}
+	\ \\
+	\grasInEx{Solution :}\\
+	\begin{enumEx}
+		\item 1. $u$ est une suite géométrique de raison 0,5 dont les premiers termes sont:
+		$u(0)=7$\\
+		$u(1)=0,5 \times u(0)=3,5$\\
+		$u(2)=0,5 \times u(1)=0,5 \times 3,5=1,75$
+		\item $v(0)=3 \times 2^0=3$ \\
+		$v(1)=3 \times 2^1=6$\\
+		$v(2)=3 \times 2^2=12$
+	\end{enumEx}
+\end{exemple}
+
+
+\subsection{Sens de variation d'une suite géométrique}
+
+\begin{propriete}
+	Une suite géométrique $u$ de premier terme $u(0)>0$ et de raison $q>0$ est :
+	\begin{itemDef}
+		\item strictement croissante si, et seulement si, $q>1$;
+		\item strictement décroissante si, et seulement si, $0<q<1$;
+		\item constante si, et seulement si, $q=1$.
+	\end{itemDef}
+\end{propriete}
+
+\begin{minipage}[c]{0.52\linewidth}
+	\begin{exemple}
+		\begin{itemEx}
+			\item \textcolor{red}{En rouge}: Nuage de points associé à la suite géométrique $u$ de premier terme $u(0)=3$ et de raison $q=0,5$. On a $0<0,5<1$ donc la suite $u$ est décroissante.\\
+			 Cela se vérifie avec les premiers termes: $u(0)=3, u(1)=1,5$, $u(2)=0,75$, etc.
+			\item \textcolor{ForestGreen}{En vert} : Nuage de points associé à la suite géométrique $v$ de premier terme $v(0)=0,1$ et de raison $q=2$. Ici, on a $2>1$ donc la suite $v$ est croissante.\\
+			Cela se vérifie avec les premiers termes : $v(0)=0,1$, $v(1)=0,2, v(2)=0,4$, etc.
+		\end{itemEx}
+	\end{exemple}
+\end{minipage} \hfill
+\begin{minipage}[c]{0.45\linewidth}
+	\includegraphics[scale=0.7]{1.OPT.04.02-Img01}
+\end{minipage}
+
+\subsection{Méthode : Représenter le nuage de points associé à une suite géométrique}
+
+\begin{methode}
+	\begin{itemMet}
+		\item On détermine les premiers termes de la suite.
+		\item On associe au terme de rang $n$ de la suite le point du plan de coordonnées $(n ; u(n))$.
+		\item On place chacun des points définis à l'étape précédente dans le repère pour obtenir le nuage de points associé à la suite.
+		\item En abscisse, on lit les valeurs de $n$ (qui sont des nombres entiers).
+		\item En ordonnée, on lit les valeurs de $u(n)$ (qui sont des nombres réels pas nécessairement entiers).
+		\item Attention, il ne faut pas relier les points entre eux.
+	\end{itemMet}
+\end{methode}
+
+\begin{exemple}
+	Après avoir déterminé les quatre premiers termes de la suite géométrique de premier terme $u(0)=0,5$ et de raison 2, représenter graphiquement le nuage de points $(n ; u(n))$ pour $0 \leqslant n \leqslant 3$.
+	
+	\ \\
+	\grasInEx{Solution :}\\
+	
+	Comme dans la méthode précédente, on calcule les premiers termes: $u(0)=0,5, u(1)=2 \times 0,5=1, u(2)=2 \times 1=2$ et $u(3)=2 \times 2=4$.\\
+	On place alors dans un repère les points de coordonnées $(0 ; 0,5),(1 ; 1),(2 ; 2)$ et $(3 ; 4)$.
+	\begin{center}
+		\includegraphics[scale=0.7]{1.OPT.04.02-Img02}
+	\end{center}
+\end{exemple}
+
+\section{Fonction exponentielle}
+
+\subsection{Définition et variations}
+
+\begin{definition}
+	Soit $a$ un réel strictement positif. Une fonction $f$ définie pour tout réel $x \in\left[0 ;+\infty\left[\right.\right.$ par $f(x)=a^x$ est une fonction exponentielle.
+\end{definition}
+
+\begin{proprietes}
+\begin{minipage}[c]{0.65\linewidth}
+	Une fonction exponentielle $f$ définie sur $\left[0 ;+\infty\left[\right.\right.$ par $f(x)=a^x$ avec $a>0$ est :
+	\begin{enumDef}
+		\item strictement croissante sur $[0 ;+\infty[$ si, et seulement si, $a>1$;
+		\item strictement décroissante sur $[0 ;+\infty[$ si, et seulement si, $0<a<1$;
+		\item constante sur $[0 ;+\infty[$ si, et seulement si, $a=1$.
+	\end{enumDef}
+\end{minipage} \hfill
+\begin{minipage}[c]{0.32\linewidth}
+	\includegraphics[scale=0.55]{1.OPT.04.02-Img03}
+\end{minipage}
+
+\end{proprietes}
+
+\subsection{Méthode : Déterminer le sens de variation d'une suite géométrique ou d'une fonction exponentielle}
+
+\begin{methode}
+	\begin{enumMet}
+		\item On vérifie que $u(0)>0$, puis on regarde la raison de la suite :
+		\begin{itemMet}
+			\item si $q>1$, la suite géométrique est croissante ;
+			\item si $q=1$, la suite géométrique est constante ;
+			\item si $0<q<1$, la suite géo métrique est décroissante.
+		\end{itemMet}
+		\item On regarde la valeur de $a$ :
+		\begin{itemMet}
+			\item si $a>1$, la fonction exponentielle est croissante sur $[0 ;+\infty[$;
+			\item si $a=1$, la fonction exponentielle est constante sur $[0 ;+\infty[$;
+			\item si $0<a<1$, la fonction exponentielle est décroissante sur $[0 ;+\infty[$.
+		\end{itemMet}
+	\end{enumMet}
+\end{methode}
+
+\begin{exemple}
+	\begin{enumEx}
+		\item Donner le sens de variation de la suite $u$ définie par $u(0)=3$ et la relation de récurrence $u(n+1)=2 \times u(n)$ valable pour tout entier naturel $n$.
+		\item Donner le sens de variation des fonctions exponentielles suivantes.
+		\begin{enumEx}
+			\item $f$ définie sur $\left[0 ;+\infty\left[\right.\right.$ par $f(x)=1,17^x$.
+			\item $g$ définie sur $\left[0 ;+\infty\left[\operatorname{par} g(x)=0,997^x\right.\right.$.
+		\end{enumEx}
+	\end{enumEx}
+	
+	\ \\
+	\grasInEx{Solution :}\\
+	
+	\begin{enumEx}
+		\item La suite $u$ est géométrique et $u(0)=3>0$, on peut donc utiliser le critère du cours.\\
+		De plus, $q=2>1$ donc la suite $u$ est strictement croissante.
+		\item Donner le sens de variation des fonctions exponentielles suivantes.
+		\begin{enumEx}
+			\item $f(x)$ est de la forme $a^x$ avec $a=1,17$. Or, $1,17>1$ donc $f$ est croissante sur $[0 ;+\infty[$.
+			\item $g(x)$ est de la forme $a^x$ avec $a=0,997$. Or, $0,997<1$ donc $g$ est décroissante sur $[0 ;+\infty[$.
+		\end{enumEx}
+	\end{enumEx}
+\end{exemple}
+
+\subsection{Propriétés algébriques}
+
+\begin{proprietes}
+	
+	Pour tous réels positifs $x$ et $y$ et pour tous réels strictement positifs $a$ et $b$ on a :
+	\begin{multicols}{3}
+	\begin{enumDef}
+		\item $a^x \times a^y=a^{x+y}$
+		\item $\dfrac{a^x}{a^y}=a^{x-y}(\operatorname{avec} x \geqslant y)$
+		\item $\left(a^x\right)^y=a^{x \times y}$
+		\item $a^x \times b^x=(a \times b)^x$
+		\item $\dfrac{a^x}{b^x}=\left(\dfrac{a}{b}\right)^x$
+	\end{enumDef}
+\end{multicols}
+\end{proprietes}
+
+\begin{proprieteTitre}{Cas particulier de la puissance $\dfrac{1}{\boldsymbol{n}}$}
+Soit $a$ et $x$ deux nombres réels strictement positifs et $n$ un nombre entier non nul. L'équation $x^n=a$ admet comme unique solution positive le réel $x=\sqrt[n]{a}=a^{\frac{1}{n}}$ appelé racine $\boldsymbol{n}$-ième de $a$.
+\end{proprieteTitre}
+
+\begin{propriete}
+	Si une grandeur subit une évolution de taux $t$, alors elle atteint la même valeur en subissant $n$ évolutions successives de même taux $(1+t)^{\frac{1}{n}}-1$ où $n$ est un entier naturel non nul.
+\end{propriete}
+
+
+\begin{definition}
+	Le nombre $(1+t)^{\frac{1}{n}}-1$ est appelé \grasInDef{taux moyen} des $n$ évolutions successives de taux global $t$.
+\end{definition}
+
+\begin{exemple}
+	D'après l'association 60 Millions de consommateurs, le prix des pâtes a augmenté d'environ $11,4 \%$ entre février 2021 et février 2022.\\ $t_{\text {moyen }}=\left(1+\frac{11,4}{100}\right)^{\frac{1}{12}}-1 \approx 0,00904 \approx 0,904 \%$.\\
+	En moyenne, entre février 2021 et février 2022, le prix des pâtes a augmenté de 0,904 \% par mois.
+\end{exemple}
+
+\newpage
+
+\subsection{Méthode : Calculer un taux d'évolution moyen}
+
+\begin{methode}
+	\begin{enumMet}
+		\item On commence par compter le nombre $n$ de périodes sur lesquelles le taux moyen doit être calculé.
+		\item On utilise l'égalité des coefficients multiplicateurs liés aux évo lutions successives.
+		\item On détermine ensuite $t_{\text {moyen }}$ en utilisant la puissance $\frac{1}{n}$.
+	\end{enumMet}
+\end{methode}
+
+\begin{exemple}
+	D'après le ministère de la Transition énergétique, le prix moyen TTC du gazole a bondi de 1,5367 \EUR{} en décembre 2021 à 2,029 \EUR{} en mars 2022, ce qui représente une augmentation d'environ $32 \%$.\\
+	À quel taux mensuel moyen cette évolution correspond-elle?
+	
+	\ \\
+	\grasInEx{Solution :}\\
+	
+	On travaille sur les données de décembre 2021 à mars 2022, soit une durée de trois mois.\\
+	On compte donc trois évolutions mensuelles.\\
+	On doit donc avoir $\left(1+t_{\text {moyen }}\right)^3=1+\frac{32}{100}=1,32$.\\
+	Ainsi, $1+t_{\text {moyen }}=1,32^{\frac{1}{3}}$.\\
+	Par conséquent, $t_{\text {moyen }}=1,32^{\frac{1}{3}}-1$.\\
+	Avec la calculatrice, on trouve $t_{\text {moyen }} \approx 9,696 \%$.\\
+	En moyenne, le prix TTC du gazole a augmenté d'environ 9,696 \% chaque mois entre décembre 2021 et mars 2022.\\
+	On peut aussi utiliser directement la formule $: t_{\text {moyen }}=\left(1+\frac{32}{100}\right)^{\frac{1}{3}}-1$.
+\end{exemple}

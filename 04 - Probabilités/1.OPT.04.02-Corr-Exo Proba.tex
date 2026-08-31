@@ -1,0 +1,242 @@
+\documentclass[12pt,a4paper]{book}
+%\documentclass[a4paper,french]{book}
+%\usepackage[17pt]{extsizes}
+
+
+\input{../1ere-preambule}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+\graphicspath{{images/}}
+\setcounter{chapter}{1}
+\chapter[Probabilités - Correction des exercices]{Probabilités \\ correction des exercices}
+\thispagestyle{fancy}
+
+\section*{Méthode 2 :}
+
+\subsection*{Corrigé exercice 11 :}
+On ajoute les effectifs marginaux.
+\begin{center}
+	\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+		\hline & Souhaitant participer & Ne souhaitant pas participer & Total\\ \hline
+		Hommes & 25 & 5 & 30\\ \hline
+		Femmes & 20 & 2 & 22\\ \hline
+		Total & 45 & 7 & 52\\ \hline
+	\end{tabular}
+\end{center}
+On en déduit les probabilités :
+\begin{multicols}{2}
+\begin{itemMet}
+	\item $P(H)=\dfrac{30}{52}=\dfrac{15}{26}$
+	\item $P(\overline{H})=1-P(H)=\dfrac{11}{26}$	
+	\item $P_H(P)=\dfrac{25}{30}=\dfrac{5}{6}$
+	\item $P_H(\overline{P})=1-P_H(P)=\dfrac{1}{6}$
+	\item $P_{\overline{H}}(P)=\dfrac{20}{22}=\dfrac{10}{11}$
+	\item $P_{\overline{H}}(\overline{P})=1-P_{\overline{H}}(P)=\dfrac{1}{11}$
+\end{itemMet}
+\end{multicols}
+\begin{center}
+	\includegraphics[scale = 0.3]{images/image6.png}
+\end{center}	
+	
+	
+	
+	
+	
+	
+	
+
+
+\section*{Méthode 3 :}
+
+\subsection*{Corrigé exercice 13 :}
+
+Soient $B$ et $C$ les événements suivants.
+
+$B$ : “Il s'agit d'un bâtiment de bureaux”
+
+$C$ : “Le bâtiment est climatisé”.
+
+$P(B)=\dfrac{15}{50}=\dfrac{3}{10}=0,3$
+
+$P_C(B)=\dfrac{10}{22}=\dfrac{5}{11}$.
+
+Comme $P(B)\neq P_C(B)$, les deux événements $B$ et $C$ ne sont pas indépendants.
+
+\subsection*{Corrigé exercice 15 :}
+
+\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+	\hline	& Externes & Demi-pensionnaires & Total\\ \hline
+	Garçons & 3 & 9 & 12\\ \hline
+	Filles & 4 & 12 & 16\\ \hline
+	Total & 7 & 21 & 28\\ \hline
+\end{tabular}
+
+Soient $G$ et $E$ les événements suivants.
+
+$G$ : “L'élève est un garçon”
+
+$E$ : “L'élève est externe”
+
+On a $P(E)=\dfrac{7}{28}=\dfrac{1}{4}$ et $P_G(E)=\dfrac{3}{12}=\dfrac{1}{4}$.
+
+Comme $P(E)=P_G(E)$, les événements $E$ et $G$ sont indépendants.
+
+\subsection*{Corrigé exercice 16 :}
+
+Soient $E$ et $F$ les événements suivants.
+
+$E$ : “L'impression rencontre un problème d'encre”
+
+$F$ : “L'impression rencontre un problème de feuille”
+
+D'après l'énoncé, $P(E)=0,08$ ; $P(F)=0,02$ et $P(E\cap F)=0,01$.
+
+On en déduit que $P_F(E)=\dfrac{P(E\cap F)}{P(F)}=\dfrac{0,01}{0,02}=0,5$.
+
+Comme $P(E)\neq P_F(E)$, les deux événements ne sont pas indépendants.
+
+\section*{Méthode 4 :}
+
+\subsection*{Corrigé exercice 23 :}
+
+La probabilité que Timéo soit ponctuel un jour donné est égal à $1-0,15=0,85$.
+
+En modélisant cette expérience aléatoire par un arbre pondéré, on détermine que la probabilité que Timéo, une semaine donnée, ne soit jamais en retard, est égale à $0,85^5\approx 0,44$.
+
+\section*{Entrainement - Partie 1 : Calculer des fréquences}
+
+\subsection*{Corrigé exercice 25 :}
+
+
+\begin{enumMet}
+	\item 40\% des élèves sont externes : $0,4\times 1200=480$.
+	
+	75\% des élèves demi-pensionnaires sont conduits : $0,75\times 720=540$.
+	
+	85\% des élèves externes sont autonomes : $0,85\times 480=408$.
+	\begin{center}
+		\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+			\hline & Autonomes & Conduits & Total\\ \hline
+			Externes & 408 & 72 & 480\\ \hline
+			Demi-pensionnaires & 180 & 540 & 720\\ \hline
+			Total & 588 & 612 & 1200\\ \hline
+		\end{tabular}
+	\end{center}
+	\item La fréquence marginale d'élèves autonomes est égale à $\dfrac{588}{1200} = 0,49$.
+\end{enumMet}
+
+\subsection*{Corrigé exercice 28 :}
+\begin{enumMet}
+	\item La fréquence marginale des tapis de course dans l'utilisation des machines cardio est égale à $\dfrac{5}{16} \approx 0,31$.
+	\item La fréquence des femmes parmi les adhérents utilisant un vélo elliptique est égale à $\dfrac{4}{6}=\dfrac{2}{3}$.	
+\end{enumMet}
+
+\section*{Entrainement - Partie 2 : Calculer des probabilités}
+
+\subsection*{Corrigé exercice 32 :}
+
+\begin{center}
+	\begin{tabular}{ | Xc | Xc | Xc | Xc | Xc | }
+		\hline & Jeunes & Adultes & Seniors & Total\\ \hline
+		Compétiteurs & 15 & 32 & 8 & 55\\ \hline
+		Non compétiteurs & 25 & 17 & 14 & 56\\ \hline
+		Total & 40 & 49 & 22 & 111\\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{enumMet}
+	\item $C\cap J$ : “L'adhérent est un jeune et un compétiteur”
+	
+	$S\cap \overline{C}$ : “L'adhérent est un senior et non compétiteur”
+	\item 
+	\begin{enumMet}
+		\item $P(C\cap J)= \dfrac{15}{111} = \dfrac{5}{37}$ . La probabilité de choisir un jeune compétiteur est égale à $\dfrac{5}{37}$.
+		
+		$P(S\cap \overline{C})= \dfrac{14}{111}$. La probabilité de choisir un senior non compétiteur est égale à $\dfrac{14}{111}$.
+		\item $P(S)= \dfrac{22}{111}$. La probabilité de choisir un senior est égale à $\dfrac{22}{111}$.
+		
+		$P(C)= \dfrac{55}{111}$. La probabilité de choisir un compétiteur est égale à $\dfrac{55}{111}$.
+		\item $P_S(C)= \dfrac{8}{22} = \dfrac{4}{11}$. Sachant que l'adhérent est un senior, la probabilité de choisir un compétiteur est égale à $\dfrac{4}{11}$.
+		
+		$P_C(S)= \dfrac{8}{55}$. Sachant que l'adhérent est un compétiteur, la probabilité de choisir un senior est égale à $\dfrac{8}{55}$.
+		
+		$P_{\overline{C}}(A)= \dfrac{17}{56} $. Sachant que l'adhérent n'est pas un compétiteur, la probabilité de choisir un adulte est égale à $\dfrac{17}{56}$.
+	\end{enumMet}
+\end{enumMet}
+
+\subsection*{Corrigé exercice 33 :}
+
+
+\begin{enumMet}
+	\item \,
+	\begin{center}
+		\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+			\hline & Défaut & Correct & Total\\ \hline
+			Écartés & 42 & 22 & 64\\ \hline
+			Conservés & 14 & 722 & 736\\ \hline
+			Total & 56 & 744 & 800\\ \hline
+		\end{tabular}
+		
+	\end{center}
+	
+	\item Sachant qu'il a été écarté, la probabilité qu'un appareil ait un défaut est égale à $\dfrac{42}{64} \approx 0,66$.
+	\item Sachant qu'il a été conservé, la probabilité qu'un appareil ait un défaut est égale à $\dfrac{14}{736} \approx 0,019$.
+\end{enumMet}
+
+\subsection*{Corrigé exercice 36 :}
+\begin{enumMet}
+	\item \,
+	\begin{center}
+		\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+			\hline & Malades & Non Malades & Total\\ \hline
+			Vaccinés & 9 & 291 & 300\\ \hline
+			Non Vaccinés & 116 & 834 & 950\\ \hline
+			Total & 125 & 1125 & 1250\\ \hline
+		\end{tabular}
+	\end{center}
+	\item $P(V)= \dfrac{300}{1250}=\dfrac{6}{25}=0,24$
+	
+	$P(G)= 0,1$
+	\item $P_V(G)=0,03$
+	\item $P_{\overline{V}}(G)=\dfrac{116}{950} \approx 0,12$
+	
+	
+	\begin{center}
+		\includegraphics[scale = 0.35]{images/image3.png}
+	\end{center}
+	
+	\item $V\cap G$ : “L'élève a été vacciné et a eu la grippe”
+	
+	$P(V\cap G) = \dfrac{9}{1250}=0,007\,2$
+	\item $V\cup G$ : “L'élève a été vacciné ou a eu la grippe”
+	
+	$P(V\cup G) = P(V) + P(G) - P(V\cap G)$
+	
+	$P(V\cup G) = 0,24 + 0,1 - 0,007\,2$
+	
+	$P(V\cup G) = 0,332\,8$
+	\item La probabilité recherchée est $P_{V}(G)$. D'après la question 3, elle vaut donc $3 \%$.
+	\item La probabilité recherchée est $P_{\overline{V}}(G)$. D'après la question 4, elle vaut donc environ $12 \%$.
+\end{enumMet}
+
+\section*{Défis !}
+
+\subsection*{Corrigé exercice 43 :}
+
+
+\begin{enumMet}
+	\item L'étude statistique est effectuée sur les bombardiers revenant de mission.
+	\item Il est préférable de blinder les zones de l'avion suivantes : le cockpit et les moteurs. Les avions touchés à ces endroits ne sont pas revenus, et on n'a pas pu observer ce type de dommages sur les autres.
+	
+	
+	
+	Ce biais est appelé biais du survivant. Il a vraiment été pris en compte par Abraham Wald pour aider l'armée américaine à protéger ses bombardiers.	
+\end{enumMet}
+
+
+\end{document}
+

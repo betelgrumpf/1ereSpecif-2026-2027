@@ -1,0 +1,515 @@
+\documentclass[11pt,a4paper]{book}
+
+
+\input{../1ere-preambule}
+
+\begin{document}
+\graphicspath{{images/}}
+%\setcounter{chapter}{1}
+\chapter{Automatismes}
+\thispagestyle{fancy}
+
+\section{proportion et pourcentage}
+
+\subsection{Calculer, appliquer, exprimer une proportion sous différentes formes}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    On réalise un sondage auprès de 400 personnes concernant les mesures prises par le gouvernement.
+    \begin{enumMet}
+        \item 94 de ces 400 personnes ont affirmés être pleinement satisfaite des mesures prises par le gouvernement.
+        
+        Déterminer la proportion de personnes pleinement satisfaite des mesures prises par le gouvernement, puis l'exprimer sous forme de pourcentage.
+        \item La proportion des personnes non satisfaites est $\dfrac{3}{8}$.
+        
+        Combien de personnes ont affirmés ne pas être satisfaites des mesures prises par le gouvernement?
+    \end{enumMet}
+    \grasInMet{Réponse :}
+    
+    \begin{enumMet}
+        \item Le nombre de personnes interrogés est $n_E=400$. Parmi ceux-ci, le nombre de ceux satisfait est $n_S=94$.
+        
+        La proportion de personnes pleinement satisfaite des mesures prises par le gouvernement est $p=\dfrac{n_S}{n_E}=\dfrac{94}{400}=0,235=23,5\%$.
+        \item Soit $n_N$ le nombre de personnes non satisfaites.
+        
+        On a $\dfrac{n_N}{n_E}=\dfrac{3}{8}$, soit $\dfrac{n_N}{400}=\dfrac{3}{8}$.
+        On a donc $n_N=\dfrac{400\times 3}{8}=150$.
+        
+        Il y a donc 150 personnes non satisfaites des mesures prises par le gouvernement.
+    \end{enumMet}
+\end{bmethode}
+
+\subsection{Calculer la proportion d'une proportion}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    Un maraîcher vend des légumes en direct à la ferme et sur des marchés mais aussi dans des supermarchés locaux. Au cours du mois de Juin, il a vendu 78\% de sa production en direct, et parmi ces légumes, 65\% ont été vendu à la ferme.
+    
+    Quelle proportion de sa production a été vendu directement à la ferme?
+    
+    \hfill 
+    
+    
+    \grasInMet{Réponse :}
+    
+    La proportion $p_1$ de légumes vendus en direct est $p_1=0,78$
+    
+    La proportion $p_2$ de légumes vendus à la ferme parmi ceux vendus en direct est $p_2=0,65$
+    
+    On calcule : $p=p_1\times p_2=0,78\times0,65=0,507=50,7\%$
+    
+    La proportion de sa production vendu directement à la ferme a été de $50,7\%$
+  
+\end{bmethode}
+
+\subsection{Passer du pourcentage d'évolution au coefficient multiplicateur}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    Le nombre de naissances dans un département français entre 2010 et 2019 a diminué de $12\%$
+    \begin{enumMet}
+        \item Par quel coefficient a été multiplié le nombre de naissances entre 2010 et 2019.
+        \item Le nombre d'habitants de ce département a, quant à lui, été multiplié par $1,03$.
+        
+        A quel taux d'évolution du nombre d'habitants de ce département ce coefficient multiplicateur correspond-il?
+    \end{enumMet}
+    \grasInMet{Réponse :}
+    
+    \begin{enumMet}
+        \item Le taux d'évolution du nombre de naissances est $t=-0,12$.
+        
+        Diminuer une quantité de $12\%$ signifie la multiplier par $c=1-\dfrac{12}{100}=0,88$.
+        
+        Par conséquent, le nombre de naissances dans ce département a été multiplié par $0,88$.
+        \item Le nombre d'habitants de ce département a, quant à lui, été multiplié par $c=1,03$.
+        
+        Le taux d'évolution associé à ce coefficient multiplicateur est:$t=c-1=0,03$.
+        
+        Ainsi le nombre d'habitants du département a augmenté de $3\%$
+    \end{enumMet}
+\end{bmethode}
+
+\section{Evolutions et variations}
+
+\subsection{Appliquer un taux d'évolution pour calculer une valeur finale}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    En 2016, 88200 personnes ont visité un parc d'attractions
+    \begin{enumMet}
+        \item Ce nombre de visiteurs a augmenté de $12,5\%$ en 2017.
+        
+        Quel a été le nombre de visiteurs en 2017.
+        \item Il y a eu $112500$ visiteurs en 2018, puis une baisse de la fréquentation de $8\%$ en 2019. Quel a été le nombre de visiteurs en 2019? 
+    \end{enumMet}
+    \grasInMet{Réponse :}
+    
+    \begin{enumMet}
+        \item Augmenter une quantité de $12,5\%$ signifie la multipler par $c=1+\dfrac{12,5}{100}=1,125$.
+        
+        Or $88200\times1,125=99225$. Le nombre de visiteurs a été de $99225$ personnes en 2017.
+        \item Diminuer une quantité de $8\%$ signifie la multiplier par $c=1-\dfrac{8}{100}=0,92$.
+        
+        Or $112500\times0,92=103500$. Le nombre de visiteurs a été de $103500$ personnes en 2019.
+    \end{enumMet}
+\end{bmethode}
+
+\subsection{Appliquer un taux d'évolution pour calculer une valeur initiale}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    Le prix du ticket de métro d'une grande ville augmente de $4\%$ au $1^{\text{er}}$ janvier 2020.
+    
+    Le ticket de métro au tarif réduit coûte $1,56$ \euro{} après son augmentation.
+    
+    Combien coûtait-il avant l'augmentation?
+    
+    \begin{minipage}[c]{0.65\linewidth}
+        \grasInMet{Réponse :}
+        
+        Augmenter une quantité de $4\%$ revient à la multiplier par $1,04$.
+        
+        Diviser par $1,04$ permet de compenser une multiplication par $1,04$.
+        
+        Le ticket de métro au tarif réduit coûte $1,56$ \euro{}. Donc son prix avant augmentation est donné par le quotient $\dfrac{1,56}{1,04}$.
+        
+        Or $\dfrac{1,56}{1,04}=1,5$. Ainsi le ticket de métro valait $1,50$ \euro{} avant le $1^{\text{er}}$ janvier 2020.
+    \end{minipage} \hfill
+    \begin{minipage}[c]{0.30\linewidth}
+        \psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+        \begin{pspicture*}(5,7)(9.5,12)
+        \rput[B](7.1,10.35){\red $\times 1,04$}
+        \rput[B](7.1,8.05){\color{ForestGreen} $\div 1,04$}
+        \rput[B](6,8.9){\large ?}
+        \rput[B](8.2,8.9){\large $1,56$}
+        \psline[linewidth=1.5pt,linearc=1.5,arrows=->,arrowscale=1.3](6,9.7)(7.1,10.7)(8.2,9.7)
+        \psline[linewidth=1.5pt,linearc=1.5,arrows=<-,arrowscale=1.3](6,8.3)(7.1,7.3)(8.2,8.3)
+        \pscircle[linewidth=1.5pt](6.,9.){0.6}
+        \pscircle[linewidth=1.5pt](8.2,9.){0.6}
+        \end{pspicture*}
+    \end{minipage}
+     
+\end{bmethode}
+
+\subsection{Calculer un taux d'évolution et l'exprimer en pourcentage}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    Le prix d'un kilogramme d'abricots passe de $2,50$ \euro{} à $1,80$ \euro{} en début de saison.
+    \begin{enumMet}
+        \item Déterminer le pourcentage d'évolution du prix du kilogramme d'abricots en début de saison.
+        \item En fin de saison, le prix d'un kilogramme passe de $1,80$ \euro{} à $2,61$ \euro{}.
+        
+        Déterminer le pourcentage d'augmentation du prix d'un kilogramme d'abricots en fin de saison
+    \end{enumMet}
+    \grasInMet{Réponse :}
+    
+    \begin{enumMet}
+        \item On a $Q_1=2,50$ et $Q_2=1,80$. Le taux d'évolution $t$ de la valeur $Q_1$ à la valeur $Q_2$ est:
+        
+        $t=\dfrac{Q_2-Q_1}{Q_1}=\dfrac{1,80-2,50}{2,50}=\dfrac{-0,70}{2,50}=-0,28=-28\%$.
+        
+        Le prix du kilogramme d'abricots a diminué de $28\%$ en début de saison.
+        \item On a $Q_1=1,81$ et $Q_2=2,61$. Le taux d'évolution $t$ correspondant est:
+        
+        $t=\dfrac{Q_2-Q_1}{Q_1}=\dfrac{2,61-1,80}{1,80}=\dfrac{0,60}{1,80}=0,45=45\%$.
+        
+        Le prix du kilogramme d'abricots a augmenté de $45\%$ en fin de saison.
+    \end{enumMet}
+\end{bmethode}
+
+\subsection{Calculer le taux d'évolution de plusieurs évolutions successives}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    Le cours d'une action au $1^{\text{er}}$ février 2020 a augmenter de $12\%$ par rapport à son cours au $1^{\text{er}}$ janvier 2020. Il augmente ensuite de $8\%$ entre le $1^{\text{er}}$ février 2020 et le $1^{\text{er}}$ mars 2020.
+    
+    \begin{enumMet}
+        \item Déterminer le taux d'évolution global du cours de cette action entre le $1^{\text{er}}$ janvier et le $1^{\text{er}}$ mars 2020.
+        \item Le cours de cette action diminue ensuite entre le $1^{\text{er}}$ mars et le $1^{\text{er}}$ avril 2020 de $25\%$, puis augmente de $14\%$ entre le $1^{\text{er}}$ avril et le $1^{\text{er}}$ mai. Déterminer le pourcentage d'évolution du cours de l'action entre le $1^{\text{er}}$ février et le $1^{\text{er}}$ mai 2020.
+    \end{enumMet}
+    \grasInMet{Réponse :}
+    
+    \begin{enumMet}
+        \item Augmenter une quantité de $12\%$ revient à la multiplier par $1+\dfrac{12}{100}$, soit $1,12$.
+        
+        Le coefficient multiplicateur global pour ces deux évolutions successives est donc $c=1,12\times1,08=1,2096$. Le taux d'évolution global du cours de l'action est donc $1,2096-1$, soit $0,2096$. Ainsi le pourcentage d'augmentation de ce cours est $20,96\%$. 
+        \item Entre le $1^{\text{er}}$ février et le $1^{\text{er}}$ mai, il y a trois évolutions successives de coefficients multiplicateurs $1,08$, $1-0,25=0,75$ et $1+0,14=1,14$. Le coefficient multiplicateur global pour ces trois évolutions successives est donc $c'=1,08\times0,75\times1,14=0,9234$.
+        
+        $c'-1=-0,0766$, donc le cours de cette action a diminué de $7,66\%$ entre le $1^{\text{er}}$ février et le $1^{\text{er}}$ mai 2020. 
+    \end{enumMet}
+\end{bmethode}
+
+\vspace*{-0.8cm}
+\subsection{Calculer un taux d'évolution réciproque}
+
+\begin{bmethode}
+    \grasInMet{Enoncé :}
+    
+    La population de bouquetins dans un parc national a diminué en 2019 de $18\%$.
+    
+    Déterminer, à $0,1\%$ près, le pourcentage d'augmentation nécessaire de cette population en 2020 afin que la population de bouquetins retrouve son niveau initial.
+    
+        \begin{minipage}[c]{0.65\linewidth}
+        \grasInMet{Réponse :}
+        
+        Diminuer une quantité de $18\%$ revient à la multiplier par $c=1-0,18=0,82$.
+        Le coefficient multiplicateur de l'évolution réciproque est $c'$ tel que $c\times c'=1$, soit $c'=\dfrac{1}{c}=\dfrac{1}{0,82}$ et $c'\approx 1,22$
+        
+        Soit $t'$ le taux d'augmentation cherché. Alors $t'=c'-1$; donc $t'\approx 0,22$. 
+        
+        On en déduit que le pourcentage d'augmentation de cette population doit être de $22\%$, à $0,1\%$ près, pour revenir au niveau initial de 2018.
+    \end{minipage} \hfill
+    \begin{minipage}[c]{0.30\linewidth}
+        \psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+        \begin{pspicture*}(5,7)(9.5,12)
+            \rput[B](7.1,10.35){\red $\times 0,82$}
+            \rput[B](7.1,10.8){\red Diminuer de $18\%$}
+            \rput[B](7.1,8.05){\color{ForestGreen} $\div 0,82$}
+            \rput[B](6,8.9){\large $B_1$}
+            \rput[B](8.2,8.9){\large $B_2$}
+            \psline[linewidth=1.5pt,linearc=1.5,arrows=->,arrowscale=1.3](6,9.7)(7.1,10.7)(8.2,9.7)
+            \psline[linewidth=1.5pt,linearc=1.5,arrows=<-,arrowscale=1.3](6,8.3)(7.1,7.3)(8.2,8.3)
+            \pscircle[linewidth=1.5pt](6.,9.){0.6}
+            \pscircle[linewidth=1.5pt](8.2,9.){0.6}
+        \end{pspicture*}
+    \end{minipage}
+\end{bmethode}
+
+\vspace*{-0.6cm}
+\section{Développer et factoriser}
+\subsection{Développer}
+
+\begin{bdefi}
+	\grasInDef{Développer} une expression consiste à transformer un \grasInDef{produit} en une \grasInDef{somme} (ou une différence).
+\end{bdefi}
+
+\begin{bprop}
+	
+	\grasInProp{Distributivité et double distributivité}
+	
+	Pour tous nombres réels $k$, $a$, $b$, $c$ et $d$ \quad on a :
+	
+	$$k\times (a+b)=ka+kb$$
+	$$(a+b)(c+d)=$$
+	
+\end{bprop}
+\begin{bmethode}
+	Quand une parenthèse est précédée d'un signe moins, on développe en multipliant par -1, c'est à dire que l'on change tous les signes à l'intérieur de la parenthèse. Sinon on ne change rien. 
+\end{bmethode}
+
+
+\begin{bexemple}{}
+	
+	Simplifier :
+	$A=\left(-6 x-4\right)-\left(5 x-4\right)=-6x-4-5x+4=-11x$ \\
+	Développer : 
+	
+	$B=(4x- 5)(7-3x)=4x\times 7+4x\times (-3x)-5\times 7-5\times (-3x)=28x-12x^2-35+15x$
+	
+	$B=-12x^2+43x-35$
+\end{bexemple}
+
+\subsection{Factoriser}
+
+\begin{bdefi}
+	Factoriser, c'est transformer une \grasInDef{somme (ou une différence)} en un \grasInDef{produit}.\\
+\end{bdefi}
+
+\begin{bmethodet}{Factoriser}
+	\begin{multicols}{2}
+		$A=(2x+3)(4x+1)-(2x+3)(x+2)$\vspace{1cm}\\
+		$A=(2x+3)\lbrack......$\vspace{1cm}\\
+		$A=(2x+3)\lbrack(4x+1)-(x+2)\rbrack$\\
+		\vfill\columnbreak
+		\begin{enumMet}
+			\item Repérer le facteur commun\\
+			Le facteur commun est $(2x+3)$. On peut le souligner dans l'expression de départ.
+			\item L'écrire devant et \underline{ouvrir un crochet }
+			\item Dans le crochet,on met tout ce qui n'est pas le facteur commun (tout ce qui n'est pas souligné).
+		\end{enumMet}
+	\end{multicols}
+\end{bmethodet}
+
+\begin{bexemple}{}
+	Factoriser $B=(x-1)(3x+4)-(x-1)(x+3)$\\
+	$B=(x-1)\left[(3x+4)-(x+3)\right]=(x-1)(3x+4-x-3)=(x-1)(2x+1)$
+\end{bexemple}
+
+\subsection{Identités remarquable}
+
+\begin{bprop}
+	
+	\grasInProp{Identités remarquables :}
+	
+	\noindent Pour tous nombres réels $a$ et $b$  on a :
+	%\tcbbreak
+	$$\phantom{X} \left(a + b \right)^2 \phantom{Xx} =  a^2 + 2ab +b^2$$
+	$$\phantom{X} \left(a - b \right)^2 \phantom{Xx} =  a^2 - 2ab +b^2$$
+	$$\left(a + b \right)\left( a- b\right) = a^2 - b^2$$
+\end{bprop}
+
+\begin{bexemple}{}
+	Factoriser les expressions $P$ et $Q$ ci-dessous.
+	\vspace{-0.3cm}
+	\setlength{\columnseprule}{0.4pt} 
+	\begin{multicols}{2}  
+		$P=(x-3)^2-49$ \\
+		$P=(x-3)^2-7^2$
+		$P=(x-3-7)(x-3+7)$\\
+		$P=(x-10)(x+4)$
+		
+		\columnbreak
+		$Q=4x^2-12x+9$ \\
+		$Q=(2x)^2-2\times 2x\times 3+3^2$\\○
+		$Q=(2x-3)^2$
+	\end{multicols} 
+\end{bexemple}
+
+%\eject
+
+\section{Calculs avec des fractions}
+\subsection{Ajouter ou soustraire des fractions}
+\begin{bmethode}
+	Pour ajouter ou soustraire des fractions, on les met sous le même dénominateur. \\
+	On multiplie le numérateur de la 1ère fraction par le dénominateur de la 2nde.\\
+	De la même manière, on multiplie le numérateur de la 2nde par le numérateur de la 1ère.\\
+	Le tout se met sous le même dénominateur : le produit des 2 dénominateurs.
+\end{bmethode}
+\begin{bexemple}
+	$\dfrac{1-3x}{x+4}-\dfrac{1+x}{x+2}=\dfrac{(1-3x)\times (x+2)-(1+x) \times (x+4)}{(x+4)(x+2)}$\\
+	\phantom{$\dfrac{1-3x+4}{x+1}-\dfrac{1+x}{x+2}$}$=\dfrac{x+2-3x^{2}-3\times 2-(x+4+x^{2}+4x)}{(x+4)(x+2)}$\vspace{0.2cm}\\
+	\phantom{$\dfrac{1-3x+4}{x+1}-\dfrac{1+x}{x+2}$}$=\dfrac{x+2-3x^{2}-6-5x-4-x^{2}}{(x+4)(x+2)}$\vspace{0.2cm}\\
+	\phantom{$\dfrac{1-3x+4}{x+1}-\dfrac{1+x}{x+2}$}$=\dfrac{-4x-10-4x^{2}}{(x+4)(x+2)}$\vspace{0.2cm}\\
+\end{bexemple}
+
+\subsection{Multiplier ou diviser des fractions}
+\begin{bmethode}
+	Pour multiplier des fractions, on multiplie les numérateurs entre eux, et les dénominateurs entre eux.\\
+	Pour diviser des fractions, on multiplie par l'inverse.
+\end{bmethode}
+
+\begin{bexemple}
+	Simplifier les expressions $A$ et $B$ ci-dessous.
+	\vspace{-0.3cm}
+	\setlength{\columnseprule}{0.4pt} 
+	\begin{multicols}{2}  
+		$A=\dfrac{x-3}{3}\times \dfrac{6}{5}$ \\
+		$A=\dfrac{(x-3)\times 6}{3\times 5}$\\
+		$A=\dfrac{2(x-3)}{5}$
+		
+		
+		\columnbreak
+		$B=\dfrac{2}{x-5} \div \dfrac{2}{x+3}$ \\
+		$B=\dfrac{2}{x-5} \times \dfrac{x+3}{2}$\\
+		$B=\dfrac{2\times (x+3)}{(x-5)\times 2}$\\
+		$B=\dfrac{x+3}{x-5}$
+	\end{multicols} 
+\end{bexemple}
+
+\section{Résolution d'équations}
+
+\subsection{Equation à produit nul}
+\begin{bprop}
+	Si un produit de facteurs est nul, alors l'un au moins de ses facteurs est nul.
+\end{bprop}
+\begin{bmethodet}{Se ramener à une équation produit nul}
+	\renewcommand{\labelitemi}{\tiny$\bullet$}
+	\begin{itemize}
+		\item On écrit tous les termes à gauche de l'équation
+		\item On FACTORISE $\rightarrow$ soit grâce à un facteur commun\\
+		\phantom { On FACTORISE}$\rightarrow$ soit grâce à un identité remarquable
+		\item On applique le produit nul.
+		
+	\end{itemize}
+\end{bmethodet}
+
+\begin{bexemple}{}
+	Résoudre dans $\R$ l'équation $(2x-1)^2-25= 0$
+	
+	$(2x-1)^2-25= 0 \iff (2x-1)^2-5^2=0$
+	
+	$\phantom{(2x-1)^2-25= 0 } \iff (2x-1-5)(2x-1+5)=0$
+	
+	$\phantom{(2x-1)^2-25= 0 } \iff (2x-6)(2x+4)=0$
+	
+	EPN : Si un produit de facteurs est nul, alors l'un au moins de ses facteurs est nul.
+	
+	$\phantom{(2x-1)^2-25= 0 } \iff (2x-6)=0$ ou $(2x+4)=0$
+	
+	$\phantom{(2x-1)^2-25= 0 } \iff 2x=6$ ou $2x=-4$
+	
+	$\phantom{(2x-1)^2-25= 0 } \iff x=3$ ou $x=-2$
+	$$S=\left\{-2\ ;\ 3\right\}$$
+	
+\end{bexemple}
+
+\subsection{Equations du type $x^2=a$}
+
+\begin{bmethode}
+	Les solutions de l'équation sont $x=\sqrt{a}$ et $x=-\sqrt{a}$ si a est positif.
+	
+	Il n'y a pas de solutions si a est négatif (un carré est toujours positif).
+\end{bmethode}
+
+\begin{bexemple} 
+	$x^{2}=7$
+	$$S=\left\{-\sqrt{7}\ ;\ \sqrt{7}\right\}$$  
+\end{bexemple}
+
+\section {Puissances}
+\begin{bdefi} 
+	Pour tout nombre réel $a$ et pour tout entier naturel $n$, on a : \\
+	$a^{0}=1$  \quad \quad \quad \quad \quad $a^1=a$ \quad \quad \quad \quad \quad \quad $a^{n}=a \times a \times a \ldots \times a$ ($n$ termes) \quad \quad \quad \quad \quad $a^{-n}=\dfrac{1}{a^{n}}$
+\end{bdefi}
+
+
+
+\begin{bexemple}{}
+	\begin{multicols}{5}
+		$3^0=1$\par
+		$(-5)^1=-5$ \par 
+		$(-7)^0=1$ \par
+		$7^{-2}=\dfrac{1}{7^2}=\dfrac{1}{49}$ \par
+		$2^3=2\times 2\times 2=8$ \par 
+	\end{multicols}
+	
+\end{bexemple}
+
+\begin{proprietes}{Si les nombres élevés à la puissance sont les mêmes : (ici a)}
+	\begin{multicols}{3}
+		$a^{n+m}=a^{n} \times a^{m}$ \par
+		$a^{n-m}=\dfrac{a^{n}}{a^{m}}$ \par
+		${(a^{n})}^m=a^{n \times m}$
+	\end{multicols}
+\end{proprietes}
+
+\begin{bexemple}{}
+	\begin{multicols}{2}
+		$7^{5} \times 7^{9}=7^{5+9}=7^{14}$ \par
+		$5^{3} \times 5^{2} \times 5^{-5}=5^{3+2-5}=3^0=1$ \par
+		$\dfrac{6^{8}}{6^{7}}=6^{8-7}=6^1=6$ \par
+		$\left(3^{-4}\right)^{5}=3^{-4\times 5}=3^{-20}$ \par
+	\end{multicols}
+\end{bexemple}
+
+
+\begin{proprietes}{Si les puissances sont les mêmes : (ici n)}
+	\begin{multicols}{2}
+		$a^{n} \times b^{n}=(a \times b)^{n}$ \par
+		$\dfrac{a^{n}}{b^{n}}=\left(\dfrac{a}{b}\right)^{n}$ \par
+		
+	\end{multicols}
+\end{proprietes}
+
+\begin{bexemple}{}
+	\begin{multicols}{2}
+		$7^{5} \times 4^{5}=(7\times 5)^5=35^5$ \par
+		$\dfrac{6^{8}}{4^{8}}=\left(\dfrac{6}{8}\right)^8=\left(\dfrac{3}{4}\right)^8$ \par
+	\end{multicols}
+\end{bexemple}
+
+\begin{brmqs}
+	
+	\begin{itemRem}
+		\item Si les nombres élevés à la puissance sont différents et si les puissances sont différentes, il n’existe pas de règle de calcul : 
+		
+		\begin{multicols}{2}
+			$7^{5} \times 4^{3}=??$ \par
+			$\dfrac{5^{8}}{4^{5}}=??$ \par
+		\end{multicols}
+		
+		\item Il n'y a pas de règle pour additionner ou soustraire des puissances : il faut factoriser : 
+		
+		$2^{31}-2^{30}= 2^{30+1}-2^{30}=2\times 2^{30}-1\times 2^{30}=2^{30}(2-1)=2^{30}$
+		
+	\end{itemRem}
+	
+\end{brmqs}
+
+\subsection*{Puissances et écriture scientifique}
+\begin{bdefi}
+	En notation scientifique, un nombre s'écrit sous la forme $a \times 10^n$ où $a$ est un nombre décimal supérieur ou égal à 1 et strictement inférieur à 10, et $n$ est un entier relatif.
+\end{bdefi}
+
+
+\begin{bexemple}
+	Ecrire en notation scientifique : \\
+	\begin{multicols}{2}
+		\begin{enumEx}
+		\item $546,7 \times 10^{9}=5,467\times 10^{11}$
+		\item $0,045 \times 10^{-3}=4,5\times 10^{-5}$
+	\end{enumEx}
+	\end{multicols}
+\end{bexemple}
+
+
+
+\end{document}

@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{DS n$^{\circ}02$ - Probabilités - 02/05/2023}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+	
+	\begin{center}
+		
+		
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						DS n$^{\circ}02$ \\
+						Probabilités 
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+\begin{center}1h20min - Barème indicatif\\
+%\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\\
+Calculatrice autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés)
+\end{center}
+
+
+\exerciceDS{ - (4 points)}
+%environ 15-20 min
+Le tableau ci-dessous donne les résultats d'une étude des plats choisis par 200 élèves à la cantine d'un lycée.\\
+\begin{tabular}{|l|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{Xc|}{} & Frites & Haricots & TOTAL \\
+	\hline Compote & 90 & 70 & 160 \\
+	\hline Crème Dessert & 30 & 10 & 40 \\
+	\hline Total & 120 & 80 & 200 \\
+	\hline
+\end{tabular}
+\begin{enumMet}
+	\item Calculer la fréquence marginale des deux sous-populations suivantes:
+	\begin{enumMet}
+		\item élèves ayant pris des frites;
+		\item élèves ayant pris une crème dessert.
+	\end{enumMet}
+	\item Calculer la fréquence conditionnelle des deux sous-populations suivantes:
+	\begin{enumMet}
+		\item élèves ayant pris une compote parmi ceux qui ont pris des frites:
+		\item élèves ayant pris des haricots parmi ceux qui ont pris une crème dessert.
+	\end{enumMet}
+\end{enumMet}
+
+
+\exerciceDS{ - (6 points)}
+Une imprimerie produit des journaux sur deux machines d'impression A et B.\\
+On relève, sur un échantillon de 800 journaux, le nombre de journaux présentant au moins un défaut.\\
+\begin{tabular}{|l|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{Xc|}{} & Machine A & Machine B & Total \\
+	\hline Sans défaut & 494 & 266 & 760 \\
+	\hline Avec défaut & 26 & 14 & 40 \\
+	\hline Total & 520 & 280 & 800 \\
+	\hline
+\end{tabular}
+
+
+On prélève au hasard un journal de cet échantillon. On note A l'évènement \guillemets{le journal a été imprimé sur la machine $A$} et $D$ l'évènement \guillemets{le journal présente un défaut}.
+\begin{enumMet}
+	\item Calculer $P(A), P(A \cap D)$ et $P_A(D)$.
+	\item Recopier et compléter les deux arbres de probabilités ci-dessous.
+	\begin{multicols}{2}
+		\Proba[Arbre]{$A$/...,$\overline{A}$/...,$D$/...,$\overline{D}$/...,$D$/...,$\overline{D}$/...}
+		
+		\Proba[Arbre]{$D$/...,$\overline{D}$/...,$A$/...,$\overline{A}$/...,$A$/...,$\overline{A}$/...}
+	\end{multicols}
+	\item Les évènements A et D sont-ils indépendants ? Interpréter la réponse.
+\end{enumMet}
+
+\exerciceDS{ - (5 points)}
+Une expérience aléatoire admet deux issues que l'on note $S$ \guillemets{succès} et $E$ \guillemets{échec}. On suppose que $P(S)=0,2$. On réalise successivement deux fois la même expérience aléatoire et de manière indépendante.
+\begin{enumMet}
+	\item Quelle est la probabilité que la seconde expérience soit un succès sachant que la première est un succès?
+	\item Recopier et compléter l'arbre de probabilités ci-dessous.\\
+	\Proba[Arbre]{$S$/...,$E$/...,$S$/...,$E$/...,$S$/...,$E$/...}
+	\item Calculer la probabilité d'obtenir deux succès successifs.
+	\item Calculer la probabilité que la première expérience soit un échec et que la seconde soit un succès.
+	\item Calculer la probabilité d'obtenir un seul succès sur les deux expériences.
+\end{enumMet}
+
+
+\exerciceDS{ - (3 points)}
+Les réservations d'un hôtel se font soit par son site Internet, soit auprès d'une agence.\\
+Une étude réalisée par l'hôtel montre que pour une réservation auprès d'une agence, $5 \%$ des clients ne se présentent pas à l'hôtel, alors que pour une réservation sur son site, $2 \%$ ne se présentent pas. $30 \%$ des réservations sont effectuées auprès d'une agence.\\
+On choisit une réservation au hasard et on considère les évènements $A$ \guillemets{la réservation a été faite en agence} et $\mathrm{H}$ \guillemets{le client se présente à l'hôtel}.\\
+\begin{enumMet}
+	\item Recopier et compléter l'arbre de probabilités ci-dessous.\\
+	\Proba[Arbre]{$A$/...,$\overline{A}$/...,$H$/...,$\overline{H}$/...,$H$/...,$\overline{H}$/...}
+	\item Calculer la probabilité qu'un client ne se présente pas à l'hôtel (Calculer $P(\overline{H})$).
+\end{enumMet}
+D'après le Bac STHR, Métropole, 2020.
+
+
+\exerciceDS{ - (3 points)}
+A et $B$ sont deux évènements tels que $P(A)=0,4$; $P(B)=0,9$ et $P(A \cap B)=0,36$.
+\begin{enumMet}
+	\item Calculer $P_A(B)$ et $P_B(A)$.
+	\item Les évènements $A$ et $B$ sont-ils indépendants ?
+\end{enumMet}
+\end{document}
+

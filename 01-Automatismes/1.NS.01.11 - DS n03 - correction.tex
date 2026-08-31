@@ -1,0 +1,259 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{\textcolor{red}{Correction DS n$^{\circ}03$ - Équations et inéquations}}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+	
+%	\noindent Nom: ${\scriptstyle  .........................................................}$ \hskip 1.8cm Prénom: ${\scriptstyle  ...................................................}$ 
+	
+	\vspace{.5cm}
+	
+	\begin{center}
+		
+		
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						\textcolor{red}{Correction DS n$^{\circ}03$ $-$ Automatismes\\
+						Équations et inéquations }
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+%\begin{center}\textbf{55min - Barème indicatif}\end{center}
+%\begin{center}\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\end{center}
+%\begin{center}\textbf{Calculatrice non autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+
+\exerciceDS{ $-$ équation du premier degré $-$ (7 points)}
+
+Résoudre dans $\mathbb{R}$ chacune des équations suivantes.
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $5 x-3=7x+9$;
+		\begin{corrBox}
+			$5x-3-7x=7x+9-7x$
+			
+			$-2x-3+3=9+3$
+			
+			$-2x=12$
+			
+			$x=\dfrac{12}{-2}=-6$		
+			
+			\framebox{$S=\{-6\}$}
+		\end{corrBox}
+		\item \ding{46} $2 x-5=-4 x+1$;
+		\begin{corrBox}
+			$2x-5+4x=-4x+1+4x$
+			
+			$6x-5+5=1+5$
+			
+			$6x=6$
+			
+			$x=\dfrac{6}{6}=1$		
+			
+			\framebox{$S=\{1\}$}
+		\end{corrBox}
+		
+%		\columnbreak
+		\item $2x+14=5x-4$;
+		
+		\begin{corrBox}
+			$2x+14-5x=5x-4-5x$
+			
+			$-3x+14-14=-4-14$
+			
+			$-3x=-18$
+			
+			$x=\dfrac{-18}{-3}=6$
+			
+			\framebox{$S=\{6\}$}
+		\end{corrBox}
+		\item $0,3 x-0,7=0,5x+0,3$;
+		
+		\begin{corrBox}
+			$3x-7=5x+3$
+			
+			$3x-7-5x=5x+3-5x$
+			
+			$-2x-7+7=3+7$
+			
+			$-2x=10$
+			
+			$x=\dfrac{10}{-2}=-5$
+			
+			\framebox{$S=\{-5\}$}		
+		\end{corrBox}
+		
+%		\columnbreak
+		\item $\dfrac{1}{3} x-\dfrac{2}{5}=-\dfrac{1}{4} x+\dfrac{5}{4}$;
+		
+		\begin{corrBox}
+			$1x-\dfrac{6}{5}=-\dfrac{3}{4}x+\dfrac{15}{4}$
+			
+			$5x-6=-\dfrac{15}{4}x+\dfrac{75}{4}$
+			
+			$20x-24=-15x+75$
+			
+			$20x+15x=75+24$
+			
+			$35x=99$
+			
+			$x=\dfrac{99}{35}$
+			
+			\framebox{$S=\left\{\dfrac{99}{35}\right\}$}				
+		\end{corrBox}
+	\end{enumMet}
+\end{multicols}
+
+\exerciceDS{ $-$ équation produit nul $-$ (4,5 points)}
+
+Résoudre dans $\mathbb{R}$ chacune des équations suivantes.
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $5(x-9)(x+4)=0$;
+		\begin{corrBox}
+			Equation produit nul
+			
+			$x-9=0$ ou $x+4=0$
+			
+			$x=9$ ou $x=-4$	
+			
+			\framebox{$S=\{-4;9\}$}
+		\end{corrBox}
+		\item $-3(3x-15)(-5x-20)=0$;
+		\begin{corrBox}
+			Equation produit nul
+			
+			$3x-15=0$ ou $-5x+20=0$
+			
+			$x=\dfrac{15}{3}=5$ ou $x=\dfrac{-20}{-5}=4$	
+			
+			\framebox{$S=\{4;5\}$}
+		\end{corrBox}
+		\item \ding{46} $-15(7 x+7)(-x+4,5)=0$.
+		\begin{corrBox}
+			Equation produit nul
+			
+			$7x+7=0$ ou $-x+4,5=0$
+			
+			$x=\dfrac{-7}{7}=-1$ ou $x=4,5$	
+			
+			\framebox{$S=\{-1\ ;\ 4,5\}$}
+		\end{corrBox}
+	\end{enumMet}
+\end{multicols}
+
+\exerciceDS{ $-$ Résoudre une inéquation du premier degré $-$ (6 points)}
+
+Résoudre dans \R chacune des inéquations suivantes.
+%\begin{multicols}{3}
+	\begin{enumMet}
+		\item $-4 x +17 \geqslant 2x-7$;
+		\begin{corrBox}
+					$-4 x +17 -2x\geqslant 2x-7-2x$
+					
+					$-6 x +17 -17\geqslant -7-17$
+					
+					$-6 x\geqslant -24$
+					
+					$x\leqslant \dfrac{-24}{-6}$
+					
+					$x\leqslant 4$
+					
+					\framebox{$S=]-\infty\ ;\ 4]$}
+		\end{corrBox}
+		\item $-5 x+12 \leqslant 0$;
+		\begin{corrBox}
+			$-5 x\leqslant -12$
+			
+			$x\geqslant \dfrac{-12}{-5}$
+			
+			$x\geqslant \dfrac{12}{5}$	
+			
+			\framebox{$S=\left[\dfrac{12}{5}\ ;\ +\infty\right[$}				
+		\end{corrBox}
+		\item $\dfrac{1}{3} x-\dfrac{1}{2} < \dfrac{1}{4}x-5$;
+		\begin{corrBox}
+			$1x-\dfrac{3}{2} < \dfrac{3}{4}x-15$
+			
+			$4x-6 < 3x-15$
+			
+			$4x-3x<-15+6$
+			
+			$x<-9$
+			
+			\framebox{$S=]-\infty\ ;\ -9[$}
+		\end{corrBox}
+	\end{enumMet}
+%\end{multicols}
+
+\exerciceDS{ $-$ équation de la forme $x^{2}=a$ $-$ (3 points)}
+
+Résoudre dans \R les équations suivantes.
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $x^{2}=9$;
+		\begin{corrBox}
+			équation de la forme $x^{2}=a$
+			
+			$x=\sqrt{9}=3$ ou $x=-\sqrt{9}=-3$
+			
+			\framebox{$S=\{-3\ ;\ 3\}$}
+		\end{corrBox}
+		\item \ding{46} $x^{2}-8=0$;
+		\begin{corrBox}
+			$x^2=8$
+			
+			équation de la forme $x^{2}=a$
+			
+			$x=\sqrt{8}$ ou $x=-\sqrt{8}$
+			
+			\framebox{$S=\{-\sqrt{8}\ ;\ \sqrt{8}\}$}
+		\end{corrBox}
+		
+		\item $3 x^{2}+6=0$;
+		
+		\begin{corrBox}
+			$3x^2=-6$
+			
+			$x^2=\dfrac{-6}{3}=-2$		
+			
+			Un carré est toujours positif donc :
+			
+			\framebox{$S=\varnothing$}
+		\end{corrBox}
+	\end{enumMet}
+\end{multicols}
+
+
+\end{document}
+

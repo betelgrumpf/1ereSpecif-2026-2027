@@ -1,0 +1,442 @@
+\chapter{Probabilités}
+\thispagestyle{fancy}
+
+\section{Rappels : Proportion et pourcentage}
+
+\subsection{Proportion d'une sous-population}
+
+\begin{exemple}
+	Sur les 480 élèves inscrits en classe de première, 108 d'entre eux ont choisi la filière STMG.
+%	\begin{center}
+%		\includegraphics{1STMG-04-01}
+%	\end{center}
+\end{exemple}
+
+La population totale des élèves de première, notée \textcolor{blue}{\textbf{N}}, est égale à \textcolor{blue}{\textbf{480}}. C'est la population de référence.
+La sous-population des élèves de STMG, notée \textcolor{red}{\textbf{n}}, est égale à \textcolor{red}{\textbf{108}}.
+
+La proportion d'élèves de STMG parmi tous les élèves de première, notée p, est :
+\[p= \frac{\textcolor{red}{\textbf{n}}}{\textcolor{blue}{\textbf{N}}} = \frac{\textcolor{red}{\textbf{108}}}{\textcolor{blue}{\textbf{480}}} = \frac{9}{40} = 0,225\]
+Cette proportion peut s'exprimer en pourcentage : p = 22,5 \%
+
+\subsection{Pourcentage d'un nombre}
+
+\begin{exemple}
+	Parmi les 480 élèves de 1ère, 15 \% ont choisi l'option Arts plastiques.
+	
+	15 \% de 480 ont choisi l'option A.P., soit :
+	
+	$15 \% \times 480 = \dfrac{15}{100}\times 480 = 72$ élèves.
+\end{exemple}
+
+\begin{methodeTitre}{Associer proportion et pourcentage}
+	Une société de 75 employés compte 12 \% de cadres et le reste d'ouvriers.\\
+	35 employés de cette société sont des femmes et 5 d'entre elles sont cadres.\\
+	a) Calculer l'effectif des cadres.\\
+	\\
+	b) Calculer la proportion de femmes dans cette société.\\
+	\\
+	c) Calculer la proportion, en \%, de cadres parmi les femmes. Les femmes cadres sont-elles sous ou sur-représentées dans cette société ?\\
+	
+	
+	
+	a) $12$ \% de $75 = \dfrac{12}{100}\times 75 = 9$.\\
+	Cette société compte 9 cadres.\\
+	\\
+	b) n = 35 femmes et N = 75 employés.\\
+	La proportion de femmes est donc égale à $p = \dfrac{35}{75} = \dfrac{7}{15} \approx 0,47$.\\
+	\\
+	c) n = 5 femmes cadres et N = 35 femmes. La population de référence n'est plus la même.\\
+	La proportion de cadres parmi les femmes est égale à $p = \dfrac{5}{35} = \dfrac{1}{7} \approx 0,14=14\%$.\\
+	$14 \% > 12 \%$ donc les femmes cadres sont sur-représentées dans cette société.
+	
+\end{methodeTitre}
+
+\subsection{Proportion d'une proportion}
+
+\begin{exemple}
+	Dans un car, il y a 40 \% de scolaires. Et parmi les scolaires, 60 \% sont des filles.
+%	\begin{center}
+%		\includegraphics{1STMG-04-02}
+%	\end{center}
+\end{exemple}
+
+L'ensemble F des filles est inclus dans l'ensemble S des scolaires et on a : pF = 60 \% de S.\\
+L'ensemble S scolaire est inclus dans l'ensemble CAR de toutes les personnes dans le car et on a : pS = 40 \% de CAR.\\
+La proportion de scolaires filles dans le CAR est donc égale à :\\ 
+$60\%\ de\ 40\% = 60 \% \times 40 \% = 0,6 \times 0,4 = 0,24 = 24 \%$
+
+\begin{methodeTitre}{Associer proportion et pourcentage}
+	Sur 67 millions d'habitants en France, 66 \% de la population est en âge de travailler (15-64 ans).\\
+	La population active représente 70 \% de la population en âge de travailler.\\
+	\\
+	a) Calculer la proportion de population active par rapport à la population totale.\\
+	\\
+	b) Combien de français compte la population active ?\\
+	\\
+	
+	a) F est la population française.\\    
+	T est la population en âge de travailler.\\
+	A est la population active.\\
+	La proportion de A parmi T est 70 \%.\\
+	La proportion de T parmi F est 66 \%.\\
+	La proportion de A parmi F est donc égale à :\\
+	$70 \% \times 66 \% = 0,7 \times 0,66 = 0,462 = 46,2 \%$\\
+	46,2 \% des français sont actifs.\\
+	\\
+	b) $46,2 \%\ de\ 67 = 0,462 \times 67 = 30,954$.\\
+	La France compte environ 31 millions d'actifs.
+\end{methodeTitre}
+
+\section{Fréquence conditionnelle, fréquence marginale}
+
+\begin{definitions}
+	\begin{enumerate}
+		\item un tableau croisé d'effectifs est un tableau dans lequel les valeurs d'\grasInDef{un caractère sont présentées en ligne} et celles de l'\grasInDef{autre caractère sont présentées en colonne}.
+		\item A l'intersection d'une ligne et d'une colonne, on indique \grasInDef{le nombre d'individus} présentant simultanément la valeur du premier caractère correspondant à la ligne, et la valeur du deuxième caractère correspondant à la colonne
+		\item L'\grasInDef{effectif marginal} d'une valeur d'un caractère est le nombre d'individus de la population présentant cette valeur du caractère.
+		\item La \grasInDef{fréquence marginale} d'une valeur d'un caractère est le quotient de l'effectif marginal de cette valeur par l'effectif total de la population.
+		\item Soit a un valeur d'un des deux caractères et b une valeur de l'autre caractère.\\
+		La \grasInDef{fréquence conditionnelle} de la valeur a sachant la valeur b est le quotient du nombre d'individus présentant les valeurs a et b par l'effectif marginal de la valeur b. 
+	\end{enumerate}
+\end{definitions}
+
+\begin{methodeTitre}{Déterminer une fréquence conditionnelle ou marginale}
+	Dans une entreprise qui compte 360 employés, on compte 60 \% d'hommes et parmi ceux-là, 12,5 \% sont des cadres.\\
+	Par ailleurs, 87,5 \% des femmes de cette entreprise sont ouvrières ou techniciennes.\\
+	\\
+	1) Compléter le tableau.\\
+	
+	\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+		\hline			
+		& Hommes & Femmes & Total \\ \hline
+		Cadres &   &   &   \\ \hline
+		Ouvriers, techniciens &   &   &  \\ \hline
+		Total &   &   &   \\
+		\hline  
+	\end{tabular}
+	\\					
+	
+	2) À l'aide de ce tableau, déterminer :\\
+	a) La fréquence marginale de cadres.\\
+	b) La fréquence conditionnelle des ouvriers, techniciens parmi les hommes.\\
+	\\ 
+	
+	1)\\
+	\setlength{\tabcolsep}{0.4cm}
+	\begin{tabular}{ | Xc | Xc | Xc | Xc | }
+		\hline			
+		& Hommes & Femmes & Total \\ \hline
+		Cadres & $12,5\% \times 216 = 27$  & $144 – 126 = 18$  & $27 + 18 = 45$  \\ \hline
+		Ouvriers, techniciens & $216 – 27 = 189$  & $87,5\% \times 144 = 126$  & $189 + 126 = 315$ \\ \hline
+		Total & $60\% \times 360 = 216$  & $360 – 216 = 144$  & $360$  \\
+		\hline
+	\end{tabular} \\
+	\\
+	\\
+	2.a) \textcolor{Red}{\textbf{La fréquence marginale se lit en "marge" du tableau}}.\\
+	\\
+	\setlength{\tabcolsep}{0.5cm}
+	\begin{tabular}{ | Xc | Xc | Xc |  >{\columncolor{blue!40!white}}Xc | }
+		\hline			
+		& Hommes & Femmes & Total \\ \hline
+		Cadres & $27$  & $18$  & $45$  \\ \hline
+		Ouvriers, techniciens & $189$  & $126$  & $315$ \\ \hline
+		Total & $216$  & $144$  & $360$  \\
+		\hline
+	\end{tabular} \\
+	\\
+	\\
+	On compte 360 employés en tout et 45 sont des cadres.\\
+	La fréquence marginale de cadres est donc égale à : $\frac{45}{360} =0,125=12,5 \%$.\\
+	\\
+	b) La fréquence conditionnelle restreint l'effectif total. Ici, on ne considère que les hommes car la "condition" est "parmi les hommes".\\
+	\textcolor{Red}{\textbf{La fréquence conditionnelle se lit sur une ligne ou une colonne intérieure du tableau}}.\\
+	Ici, on ne va donc considérer que la colonne concernant les hommes (condition).
+	\\
+	\begin{tabular}{ | Xc | >{\columncolor{blue!40!white}}Xc | Xc | Xc | }
+		\hline			
+		& Hommes & Femmes & Total \\ \hline
+		Cadres & $27$  & $18$  & $45$  \\ \hline
+		Ouvriers, techniciens & $189$  & $126$  & $315$ \\ \hline
+		Total & $216$  & $144$  & $360$  \\
+		\hline
+	\end{tabular} \\
+	\\
+	\\
+	On compte 216 hommes en tout et parmi eux, 189 sont des ouvriers, techniciens.\\
+	La fréquence conditionnelle d'ouvriers, techniciens parmi les hommes est donc égale à :
+	$\dfrac{189}{216} =0,875=87,5 \%$.
+\end{methodeTitre}
+
+\section{Probabilité conditionnelle}
+
+\begin{definition}
+	Soit $A$ et $B$ deux événements avec $P(A)\neq 0$.\\
+	On appelle probabilité conditionnelle de $B$ sachant $A$, la probabilité que l'événement $B$ se réalise sachant que l'événement $A$ est réalisé. Elle est notée $P_A (B)$  et est définie par : \\$P_A(B)= \dfrac{P(A \cap B)}{P(A)}$. 
+\end{definition}
+
+\begin{exemples}
+	\begin{enumerate}
+		
+		\item	On tire une carte au hasard dans un jeu de 32 cartes.\\
+		Soit $A$ l'événement \guillemets{Le résultat est un pique}.\\
+		Soit $B$ l'événement \guillemets{Le résultat est un roi}.\\
+		Donc $A \cap B$ est l'événement \guillemets{Le résultat est le roi de pique}.\\
+		
+		Alors : $P(A)= \dfrac{8}{32} = \dfrac{1}{4}$ et $P(A \cap B)= \dfrac{1}{32}$.\\
+		Donc la probabilité que le résultat soit un roi sachant qu'on a tiré un pique est :\\
+		$P_A(B)= \dfrac{P(A \cap B)}{P(A)}=\dfrac{\dfrac{1}{32}}{\dfrac{1}{4}}=\dfrac{1}{8}$.\\
+		\ \\
+		On peut retrouver intuitivement ce résultat. En effet, sachant que le résultat est un pique, on a une chance sur 8 d'obtenir le roi.\\
+		\\
+		\item Un sac contient 50 boules, dont 20 boules rouges et 30 boules noires, où il est marqué soit \guillemets{Gagné} ou soit \guillemets{Perdu}.\\ 
+		Sur 15 boules rouges, il est marqué Gagné.\\
+		Sur 9 boules noires, il est marqué Gagné.\\
+		On tire au hasard une boule dans le sac.\\
+		Soit $R$ l'événement \guillemets{On tire une boule rouge}.\\
+		Soit $G$ l'événement \guillemets{On tire une boule marquée Gagné}.\\
+		Donc $R \cap G$ est l'événement \guillemets{On tire une boule rouge marquée Gagné}.\\
+		\ \\
+		Alors : $P(R)= \dfrac{20}{50} = \dfrac{2}{5}=0,4$ et $P(R \cap G)= \dfrac{15}{50}=\dfrac{3}{10}=0,3$.\\
+		Donc la probabilité qu'on tire une boule marquée Gagné sachant qu'elle est rouge est :\\
+		$P_R(G)= \dfrac{P(R \cap G)}{P(R)}=\dfrac{O,3}{0,4}=\dfrac{3}{4}=0,75$.\\
+		\ \\
+		On peut retrouver intuitivement ce résultat. En effet, sachant que le résultat est une boule rouge, on a 15 chances sur 20 qu'il soit marqué Gagné.
+	\end{enumerate}
+\end{exemples}
+
+\begin{remarque}
+	La probabilité conditionnelle suit les règles et lois de probabilités vues pour les probabilité simples. On a en particulier :
+\end{remarque}
+
+\begin{propriete}
+	Soit A et B deux événements avec $P(A)\neq 0$.
+	\begin{itemDef}
+		\item $0\leq P_A(B)\leq 1$
+		\item $P_A(\overline{B})=1-P_A(B)$
+		\item $P(A \cap B)=P(A)\times P_A (B)$
+	\end{itemDef}
+\end{propriete}
+
+\section{Arbre pondéré}
+
+\subsection{Exemple}
+
+\begin{exemple}
+	On reprend le 2e exemple étudié au paragraphe I.
+	L'expérience aléatoire peut être schématisée par un arbre pondéré (ou arbre de probabilité) :
+	\begin{center}
+		%\includegraphics[scale=0.8]{TSTG.04.01.png}\\
+		\begin{tikzpicture}[xscale=1,yscale=1]
+			% Styles (MODIFIABLES)
+			\tikzstyle{fleche}=[->,>=latex,thick]
+			\tikzstyle{noeud}=[rectangle]
+			\tikzstyle{feuille}=[rectangle]
+			\tikzstyle{etiquette}=[midway,fill=white]
+			% Dimensions (MODIFIABLES)
+			\def\DistanceInterNiveaux{3.5}
+			\def\DistanceInterFeuilles{3}
+			% Dimensions calculées (NON MODIFIABLES)
+			\def\NiveauA{(0)*\DistanceInterNiveaux}
+			\def\NiveauB{(1.5)*\DistanceInterNiveaux}
+			\def\NiveauC{(2.5)*\DistanceInterNiveaux}
+			\def\InterFeuilles{(-1)*\DistanceInterFeuilles}
+			% Noeuds (MODIFIABLES : Styles et Coefficients d'InterFeuilles)
+			\node[noeud] (R) at ({\NiveauA},{(1.5)*\InterFeuilles}) {On tire une boule};
+			\node[noeud] (Ra) at ({\NiveauB},{(0.5)*\InterFeuilles}) {Boule Rouge};
+			\node[feuille] (Raa) at ({\NiveauC},{(0)*\InterFeuilles}) {Gagné };
+			\node[feuille] (Rab) at ({\NiveauC},{(1)*\InterFeuilles}) {Perdu};
+			\node[noeud] (Rb) at ({\NiveauB},{(2.5)*\InterFeuilles}) {Boule Noire};
+			\node[feuille] (Rba) at ({\NiveauC},{(2)*\InterFeuilles}) {Gagné};
+			\node[feuille] (Rbb) at ({\NiveauC},{(3)*\InterFeuilles}) {Perdu};
+			% Arcs (MODIFIABLES : Styles)
+			\draw[fleche] (R)--(Ra) node[etiquette] {\footnotesize{$P(R)=0,4$}};
+			\draw[fleche] (Ra)--(Raa) node[etiquette] {\footnotesize{$P_R(G)=0,75$}};
+			\draw[fleche] (Ra)--(Rab) node[etiquette] {\footnotesize{$P_R(\overline{G})$}};
+			\draw[fleche] (R)--(Rb) node[etiquette] {\footnotesize{$P(\overline{R})=0,6$}};
+			\draw[fleche] (Rb)--(Rba) node[etiquette] {\footnotesize{$P_{\overline{R}}(G)$}};
+			\draw[fleche] (Rb)--(Rbb) node[etiquette] {\footnotesize{$P_{\overline{R}}(\overline{G})$}};
+			\draw[ForestGreen,<-] (Raa)--($(Raa)+(1.5,0)$) node[right,font=\sffamily] {$R\cap G$ (boule rouge inscrit gagné)} ;
+			\draw[white,<-] (Raa)--($(Raa)+(1.5,-0.5)$) node[right,font=\sffamily] {\textcolor{ForestGreen}{$P(R\cap G)=P(R)\times P(G)=0,3$}} ;
+			\draw[ForestGreen,<-] (Rab)--($(Rab)+(1.5,0)$) node[right,font=\sffamily] {$R\cap \overline{G}$ (boule rouge inscrit perdu)} ;
+			\draw[ForestGreen,<-] (Rba)--($(Rba)+(1.5,0)$) node[right,font=\sffamily] {$\overline{R}\cap G$ (boule noire inscrit gagné)} ;
+			\draw[ForestGreen,<-] (Rbb)--($(Rbb)+(1.5,0)$) node[right,font=\sffamily] {$\overline{R}\cap \overline{G}$ (boule noire inscrit perdu)} ;
+		\end{tikzpicture}
+	\end{center}	
+\end{exemple}
+\subsection{Règles}
+\begin{regle}
+	La somme des probabilités des branches issues d'un même nœud est égale à 1.
+\end{regle}
+\begin{exemples}
+	\begin{itemEx}
+		\item A partir du noeud \guillemets{On tire une boule}, on a : $P(R)+P(\overline{R})=0,4+0,6=1$ 
+		\item A partir du noeud \guillemets{Boule rouge}, on a : $P_R (\overline{G})=1-P_R(G)=1-0,75=0,25$.	
+	\end{itemEx}
+\end{exemples}
+Ces exemples font apparaître une formule donnée au paragraphe I.\\
+
+\begin{regle}
+	La probabilité d'une \guillemets{feuille} (extrémité d'un chemin) est égale au produit des probabilités du chemin aboutissant à cette feuille.
+\end{regle}
+\begin{exemple}
+	On considère la feuille $R \cap G$.
+	On a :\\
+	$P(R \cap G)=P(R)\times P_R (G)=0,4\times 0,75=0,3$ 
+\end{exemple}
+
+\begin{regle}
+	\grasInProp{Formule des probabilités totales}\\
+	La probabilité d'un événement associé à plusieurs "feuilles" est égale à la somme des probabilités de chacune de ces "feuilles".
+\end{regle}
+\begin{exemple}
+	L'événement \guillemets{On tire une boule marquée Gagné} est associé aux feuilles $R \cap G$ et $\overline R \cap G$. On a :\\
+	
+	$P(R \cap G)=0,3$ et 
+	$P(\overline R \cap G)= \dfrac{9}{50} = 0,18$\\ (Probabilité de tirer une boule noire marquée Gagné)\\
+	Donc $P(G)=P(R \cap G)+P(\overline R \cap G)=0,3+0,18=0,48$.
+\end{exemple}
+
+\begin{methodeTitre}{Calculer la probabilité d'un événement associé à plusieurs feuilles}
+	Lors d'une épidémie chez des bovins, on s'est aperçu que si la maladie est diagnostiquée suffisamment tôt chez un animal, on peut le guérir ; sinon la maladie est mortelle.\\ 
+	Un test est mis au point et essayé sur un échantillon d'animaux dont 2 \% est porteur de la maladie. On obtient les résultats suivants :\\
+	– si un animal est porteur de la maladie, le test est positif dans 85 \% des cas ;\\
+	– si un animal est sain, le test est négatif dans 95 \% des cas.\\
+	\ \\
+	On choisit de prendre ces fréquences observées comme probabilités pour toute la population et d'utiliser le test pour un dépistage préventif de la maladie.\\
+	\ \\
+	On note respectivement $M$ et $T$ les événements \guillemets{Être porteur de la maladie} et
+	\guillemets{Avoir un test positif}.
+	
+	1) Un animal est choisi au hasard. Quelle est la probabilité que son test soit positif ?\\
+	\emph{D'après BAC S, Antilles-Guyanne 2010}\\	
+	\ \\
+	2) Si le test du bovin est positif, quelle est la probabilité qu'il soit malade ?\\
+	\ \\
+	\ \\
+	%    \begin{center}
+		%    	\includegraphics{TSTG.04.02.png}
+		%    \end{center}
+	\begin{center}
+		%\includegraphics[scale=0.8]{TSTG.04.01.png}\\
+		\begin{tikzpicture}[xscale=1,yscale=1]
+			% Styles (MODIFIABLES)
+			\tikzstyle{fleche}=[->,>=latex,thick]
+			\tikzstyle{noeud}=[rectangle]
+			\tikzstyle{feuille}=[rectangle]
+			\tikzstyle{etiquette}=[midway,fill=white]
+			% Dimensions (MODIFIABLES)
+			\def\DistanceInterNiveaux{5}
+			\def\DistanceInterFeuilles{2}
+			% Dimensions calculées (NON MODIFIABLES)
+			\def\NiveauA{(0)*\DistanceInterNiveaux}
+			\def\NiveauB{(1.5)*\DistanceInterNiveaux}
+			\def\NiveauC{(2.5)*\DistanceInterNiveaux}
+			\def\InterFeuilles{(-1)*\DistanceInterFeuilles}
+			% Noeuds (MODIFIABLES : Styles et Coefficients d'InterFeuilles)
+			\node[noeud] (R) at ({\NiveauA},{(1.5)*\InterFeuilles}){};
+			\node[noeud] (Ra) at ({\NiveauB},{(0.5)*\InterFeuilles}) {$M$};
+			\node[feuille] (Raa) at ({\NiveauC},{(0)*\InterFeuilles}) {$T$};
+			\node[feuille] (Rab) at ({\NiveauC},{(1)*\InterFeuilles}) {$\overline{T}$};
+			\node[noeud] (Rb) at ({\NiveauB},{(2.5)*\InterFeuilles}) {$\overline{M}$};
+			\node[feuille] (Rba) at ({\NiveauC},{(2)*\InterFeuilles}) {$T$};
+			\node[feuille] (Rbb) at ({\NiveauC},{(3)*\InterFeuilles}) {$\overline{T}$};
+			% Arcs (MODIFIABLES : Styles)
+			\draw[fleche] (R)--(Ra) node[etiquette] {\footnotesize{$P(M)=0,02$}};
+			\draw[fleche] (Ra)--(Raa) node[etiquette] {\footnotesize{$P_M(T)=0,85$}};
+			\draw[fleche] (Ra)--(Rab) node[etiquette] {\footnotesize{$P_M(\overline{T})=0,15$}};
+			\draw[fleche] (R)--(Rb) node[etiquette] {\footnotesize{$P(\overline{M})=0,98$}};
+			\draw[fleche] (Rb)--(Rba) node[etiquette] {\footnotesize{$P_{\overline{M}}(T)=0,05$}};
+			\draw[fleche] (Rb)--(Rbb) node[etiquette] {\footnotesize{$P_{\overline{M}}(\overline{T})=0,95$}};
+			\draw[ForestGreen,<-] (Raa)--($(Raa)+(1.5,0)$) node[right,font=\sffamily] {$M\cap T$} ;
+			%\draw[white,<-] (Raa)--($(Raa)+(1.5,-0.5)$) node[right,font=\sffamily] {\textcolor{ForestGreen}{$P(R\cap G)=P(R)\times P(G)=0,3$}} ;
+			\draw[ForestGreen,<-] (Rab)--($(Rab)+(1.5,0)$) node[right,font=\sffamily] {$M\cap \overline{T}$} ;
+			\draw[ForestGreen,<-] (Rba)--($(Rba)+(1.5,0)$) node[right,font=\sffamily] {$\overline{M}\cap T$} ;
+			\draw[ForestGreen,<-] (Rbb)--($(Rbb)+(1.5,0)$) node[right,font=\sffamily] {$\overline{M}\cap \overline{T}$} ;
+		\end{tikzpicture}
+	\end{center}	
+	La probabilité que le test soit positif est associée aux deux feuilles $M\cap T$ et $\overline M\cap T$.\\
+	$P(T)=P(M\cap T)+P(\overline M\cap T )$ (Formule des probabilités totales)\\
+	$P(T)= 0,02 \times 0,85 + 0,98 \times 0,05 = 0,066$.
+	La probabilité que le test soit positif est égale à 6,6\%. \\
+	\ \\
+	2) $P_T (M)= \dfrac{P(T\cap M)}{P(T)}  = \dfrac{0,02\times 0,85}{0,066} \approx 0,26$.\\
+	La probabilité que le bovin soit malade sachant que le test est positif est d'environ 26\%.
+\end{methodeTitre}
+
+\section{Indépendance de deux événements}
+
+% \subsection{Indépendance de deux événements}
+
+\begin{definition}
+	On dit que deux évènements $A$ et $B$ de probabilité non nulle sont indépendants lorsque $P(A\cap B)=P(A)\times P(B)$.
+\end{definition}
+
+\begin{remarque}
+	On a également :
+	$A$ et $B$ sont indépendants, si et seulement si, $P_A (B)=P(B)$ ou $P_B (A)=P(A)$.
+\end{remarque}
+
+\begin{exemple}
+	On tire une carte au hasard dans un jeu de 32 cartes.\\
+	Soit $R$ l'événement \guillemets{On tire un roi}.\\
+	Soit $T$ l'événement \guillemets{On tire un trèfle}.\\
+	Alors $R\cap T$ est l'événement \guillemets{On tire le roi de trèfle}.\\
+	\ \\
+	On a :\\
+	$P(R)  = \dfrac{4}{32} = \dfrac{1}{8}$ , $P(T)= \dfrac{8}{32} = \dfrac{1}{4}$ et $P(R\cap T)= \dfrac{1}{32}$\\ 
+	Donc $P(R)\times P(T)  = \dfrac{1}{8} \times \dfrac{1}{4} = \dfrac{1}{32} = P(R\cap T)$\\
+	Les événements $R$ et $T$ sont donc indépendants.
+	Ainsi, par exemple, $P_T (R)=P(R)$. Ce qui se traduit par la probabilité de tirer un roi parmi les trèfles et égale à la probabilité de tirer un roi parmi toutes les cartes.\\
+	\\
+	\underline{Contre-exemple :}\\
+	On reprend l'expérience précédente en ajoutant deux jokers au jeu de cartes.\\
+	Ainsi :
+	$P(R)  = \dfrac{4}{34} = \dfrac{2}{17}$, $P(T)= \dfrac{8}{34} = \dfrac{4}{17}$ et $P(R\cap T)= \dfrac{1}{34}$\\
+	Donc $P(R)\times P(T)  = \dfrac{2}{17} \times \dfrac{4}{17} = \dfrac{8}{289} \neq P(R\cap T)$\\
+	Les événements R et T ne sont donc pas indépendants.
+\end{exemple}
+
+\begin{methodeTitre}{Utiliser l'indépendance de deux événements}
+	Dans une population, un individu est atteint par la maladie $m$ avec une probabilité égale à $0,005$ et par la maladie $n$ avec une probabilité égale à $0,01$.\\
+	On choisit au hasard un individu de cette population.\\
+	Soit $M$ l'événement \guillemets{L'individu a la maladie $m$}.\\
+	Soit $N$ l'événement \guillemets{L'individu a la maladie $n$}.\\
+	On suppose que les événements $M$ et $N$ sont indépendants.\\
+	Calculer la probabilité de l'événement $E$ \guillemets{L'individu a au moins une des deux maladies}.\\
+	\\
+	$P(E)=P(M\cup N)=P(M)+P(N)-P(M\cap N)$\\
+	$P(E)=P(M)+P(N)-P(M)\times P(N)$, car les événements $M$ et $N$ sont indépendants.\\
+	$P(E)= 0,005 + 0,01 – 0,005 \times 0,01 = 0,01495$\\
+	
+	La probabilité qu'un individu choisi au hasard ait au moins une des deux maladies est égale à $0,01495$.\\
+\end{methodeTitre}
+
+\begin{propriete}
+	Si $A$ et $B$ sont indépendants alors $\overline{A}$ et $B$ sont indépendants.
+\end{propriete}
+
+%     \begin{demonstration}
+	%     $P(\overline{A}\cap B)=P(B\cap \overline{A})$\\
+	%     $P(\overline{A}\cap B)=P(B)\times P_B (\overline{A})$\\
+	%     $P(\overline{A}\cap B)=P(B)\times (1-P_B(A))$\\
+	%     $P(\overline{A}\cap B)=P(B)\times (1-P(A))$ car A et B sont indépendants\\
+	%     $P(\overline{A}\cap B)=P(B)\times P(\overline{A})$\\
+	%     \\
+	%     Donc $\overline{A}$ et $B$ sont indépendants.
+	% \end{demonstration}
+
+\begin{exemple}
+	Lors d'un week-end prolongé, Bison futé annonce qu'il y a $42\%$ de risque de tomber dans un bouchon sur l'autoroute A6 et $63\%$ sur l'autoroute A7.\\
+	Soit $A$ l'événement \guillemets{On tombe dans un bouchon sur l'autoroute A6.}\\
+	Soit $B$ l'événement \guillemets{On tombe dans un bouchon sur l'autoroute A7.}\\
+	On suppose que les événements $A$ et $B$ sont indépendants.\\
+	\\
+	Alors les événements $\overline{A}$ et $B$ sont également indépendants et on a :\\
+	$P(\overline{A} \cap B)=P(\overline{A})\times P(B)=0,58\times 0,63=0,3654$\\
+	\\
+	On peut interpréter ce résultat : \\
+	La probabilité de tomber dans un bouchon sur l'autoroute A7 mais pas sur l'autoroute A6 est égale à $36,54\%$.
+\end{exemple}
+

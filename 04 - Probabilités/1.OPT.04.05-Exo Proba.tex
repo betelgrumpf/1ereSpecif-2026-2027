@@ -1,0 +1,272 @@
+\documentclass[11pt,a4paper]{book}
+%\documentclass[a4paper,french]{book}
+%\usepackage[17pt]{extsizes}
+
+
+\input{../1ere-preambule}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+\graphicspath{{images/}}
+\setcounter{chapter}{3}
+\chapter[ Probabilités - Exercices]{Probabilités \\ Exercices d'entrainement}
+\thispagestyle{fancy}
+
+\begin{multicols}{2}
+	\exerciceDS{ - (Ex 7 du LS)}
+
+On considère le tableau d'effectifs suivant.
+
+\begin{tabular}{|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & $\mathbf{A}$ & $\overline{\mathbf{A}}$ & Total \\
+	\hline $\mathbf{B}$ & 412 & 376 & 788 \\
+	\hline$\overline{\mathbf{B}}$ & 1236 & 756 & 1992 \\
+	\hline Total & 1648 & 1132 & 2780 \\
+	\hline
+\end{tabular}
+\begin{enumMet}
+	\item Calculer la fréquence marginale de A .
+	\item Quelle est la fréquence marginale de $\overline{\mathrm{B}}$ ?
+	\item Calculer la fréquence conditionnelle de A relativement à $B$.
+	\item Quelle est la fréquence conditionnelle de $\bar{B}$ relativement à A ?
+\end{enumMet}
+
+\columnbreak
+
+\exerciceDS{ - (Ex 8 du LS)}
+
+Le tableau ci-dessous présente les activités préférées d'un groupe de 100 personnes.
+
+\setlength{\tabcolsep}{0.25cm}
+\begin{tabular}{|c|c|c|c|c|}
+	\cline { 2 - 5 } \multicolumn{1}{c|}{} & Pétanque & Piscine & Cartes & Total \\
+	\hline Femmes & 6 & 16 & 8 & \\
+	\hline Hommes & 10 & 2 & 8 & \\
+	\hline Total & & & & \\
+	\hline
+\end{tabular}
+\begin{enumMet}
+	\item Recopier et compléter ce tableau croisé.
+	\item Calculer les cinq fréquences marginales, et interpréter les résultats.
+	\item \begin{enumMet}
+		\item Calculer la fréquence conditionnelle des femmes parmi les joueurs de cartes.
+		\item Parmi les femmes, quelle est la fréquence des joueuses de pétanque?
+\end{enumMet}
+\end{enumMet}
+\end{multicols}
+
+
+\exerciceDS{ - (Ex 11 du LS)}
+
+Le club de badminton de la commune souhaite organiser une coupe loisir et sonde ses adhérents pour savoir s'ils comptent y participer.
+
+\begin{tabular}{|Xc|Xc|Xc|}
+	\cline { 2 - 3 } \multicolumn{1}{c|}{} & Souhaitent participer & Ne souhaitent pas participer \\
+	\hline Hommes & 25 & 5 \\
+	\hline Femmes & 20 & 2 \\
+	\hline
+\end{tabular}
+
+
+On choisit un adhérent du club au hasard et on note:
+\begin{itemMet}
+	\item P l'événement : \guillemets{L'adhérent souhaite participer à la coupe loisir};
+	\item H l'événement : \guillemets{L'adhérent est un homme}. 
+\end{itemMet} 
+Compléter l'arbre de probabilité ci-dessous.
+On écrira les probabilités sous forme de fractions irréductibles.
+
+\[\Proba[Arbre,Angle=40,Branche=3,Rayon=0.5,Incline=false]{H/...,$\overline{H}$/...,P/...,$\overline{P}$/...,P/...,$\overline{P}$/...}\]
+
+\exerciceDS{ - (Ex 12 du LS)}
+
+Soit A et B deux événements tels que
+
+$$
+\mathrm{P}(\mathrm{~A})=0,8, \mathrm{P}(\mathrm{~B})=0,4 \text { et } \mathrm{P}(\mathrm{~A} \cap \mathrm{~B})=0,32
+$$
+
+
+Les événements A et B sont-ils indépendants? Justifier.
+
+
+
+\exerciceDS{ - (Ex 13 du LS)}
+
+Sur les 50 bâtiments d'une rue, on a relevé les effectifs suivants.
+
+\begin{tabular}{|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Climatisés & Non-climatisés & Total \\
+	\hline Habitations & 12 & 23 & 35 \\
+	\hline Bureaux & 10 & 5 & 15 \\
+	\hline Total & 22 & 28 & 50 \\
+	\hline
+\end{tabular}
+
+On entre dans un bâtiment au hasard. Les événements \guillemets{Le bâtiment est climatisé} et \guillemets{Il s'agit d'un bâtiment de bureaux} sont-ils indépendants?
+
+\exerciceDS{ - (Ex 15 du LS)}
+
+Les garçons et les filles d'une classe de première sont soit demi-pensionnaires, soit externes. Leur répartition est donnée selon le tableau d'effectifs à double entrée suivant.
+
+\begin{tabular}{|Xc|Xc|Xc|}
+	\cline { 2 - 3 } \multicolumn{1}{c|}{} & Externes & Demi-pensionnaires \\
+	\hline Garçons & 3 & 9 \\
+	\hline Filles & 4 & 12 \\
+	\hline
+\end{tabular}
+
+On choisit dans la classe un élève au hasard.
+Les deux événements \guillemets{L'élève est un garçon} et \guillemets{L'élève est externe} sont-ils indépendants?
+
+
+
+\exerciceDS{ - (Ex 16 du LS)}
+
+Lors de l'impression d'un document par un imprimeur, deux défauts majeurs peuvent intervenir: une erreur liée à l'encre, dont on estime la probabilité d'apparition à 0,08 , ou une erreur liée à la feuille, dont la probabilité d'apparition s'élève à 0,02 .
+
+On estime que la probabilité qu'une impression cumule les deux défauts s'élève à 0,01 .
+
+Les deux événements \guillemets{L'impression rencontre un problème d'encre} et \guillemets{L'impression rencontre un problème de feuille} sont-ils indépendants ?
+
+Justifier.
+
+\exerciceDS{ - (Ex 18 du LS)}
+
+Dans une urne opaque contenant deux boules rouges et trois boules vertes, on prélève successivement trois boules, au hasard et avec remise. Quelle est la probabilité que la troisième boule prélevée soit rouge?
+
+\exerciceDS{ - (Ex 21 du LS)}
+
+On lance quatre fois de suite une pièce équilibrée. Quelle est la probabilité d'obtenir pile à chaque fois?
+
+\exerciceDS{ - (Ex 23 du LS)}
+
+Chaque jour du lundi au vendredi, Timéo est en retard au lycée avec une probabilité égale à 0,15 . En supposant ses déplacements indépendants, quelle est la probabilité que, une semaine donnée, Timéo ne soit jamais en retard ?
+
+
+\exerciceDS{ - (Ex 25 du LS)}
+
+Dans un lycée, 1200 élèves ont répondu à un sondage pour savoir s'ils viennent de manière autonome (à vélo ou à pied) ou s'ils sont conduits (transport en commun ou voiture) ainsi que pour savoir s'ils sont demi-pensionnaires ou externes :
+\begin{itemMet}
+	\item $40 \%$ des élèves sont externes ;
+	\item 75 \% des élèves demi-pensionnaires sont conduits ;
+	\item 85 \% des élèves externes sont autonomes.
+\end{itemMet}
+\begin{enumMet}
+	\item Recopier et compléter le tableau ci-dessous.
+	
+\begin{tabular}{|c|l|l|l|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Autonomes & Conduits & Total \\
+	\hline Externes & & & \\
+	\hline Demi-pensionnaires & & & \\
+	\hline Total & & & 1200 \\
+	\hline
+\end{tabular}
+	\item En déduire la fréquence marginale des élèves autonomes.
+\end{enumMet}
+
+\exerciceDS{ - (Ex 28 du LS)}
+
+Le gérant d'un club de fitness recense les machines de sport de type cardio utilisées par ses adhérents à un moment donné.
+
+\begin{tabular}{|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Hommes & Femmes & Total \\
+	\hline Tapis de course & 3 & 2 & 5 \\
+	\hline Vélos elliptiques & 2 & 4 & 6 \\
+	\hline Rameurs & 4 & 1 & 5 \\
+	\hline Total & 9 & 7 & 16 \\
+	\hline
+\end{tabular}
+
+\begin{enumMet}
+	\item Quelle est la fréquence marginale des tapis de course dans l'utilisation des machines cardio?
+	\item Parmi les adhérents utilisant un vélo elliptique, quelle est la fréquence des femmes ?
+\end{enumMet}
+
+\exerciceDS{ - (Ex 32 du LS)}
+
+Dans un club d'aviron, les adhérents sont regroupés selon leur âge (les jeunes, les adultes et les seniors), puis en deux catégories (compétiteurs ou non).
+Les effectifs sont résumés dans le tableau ci-dessous.
+
+\begin{tabular}{|Xc|Xc|Xc|Xc|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Jeunes & Adultes & Seniors \\
+	\hline Compétiteurs & 15 & 32 & 8 \\
+	\hline Non compétiteurs & 25 & 17 & 14 \\
+	\hline
+\end{tabular}
+
+On choisit un adhérent au hasard. On définit les quatre événements suivants:
+\begin{itemMet}
+	\item J : \guillemets{L'adhérent est un jeune};
+	\item A : \guillemets{L'adhérent est un adulte};
+	\item S : \guillemets{L'adhérent est un senior};
+	\item C : \guillemets{L'adhérent est un compétiteur}.
+\end{itemMet}
+\begin{enumMet}
+	\item Décrire par une phrase les événements $\mathbf{C} \cap J$ et $\mathrm{S} \cap \overline{\mathrm{C}}$.
+	\item Calculer les probabilités suivantes sous forme de fractions irréductibles, puis les interpréter dans le contexte de l'exercice.
+	\begin{enumMet}
+		\item $\mathrm{P}(\mathrm{C} \cap \mathrm{J})$ et $\mathrm{P}(\mathrm{S} \cap \overline{\mathrm{C}})$.
+		\item $\mathrm{P}(\mathrm{S})$ et $\mathrm{P}(\mathrm{C})$.
+		\item $P_S(C), P_C(S)$ et $P_C(A)$.
+	\end{enumMet}
+\end{enumMet}
+
+
+\exerciceDS{ - (Ex 33 du LS)}
+
+Dans une usine, $7 \%$ des appareils sortants ont un défaut de fabrication. Dans $75 \%$ des cas, ce défaut est visible et le produit est alors écarté.
+Certains appareils, pourtant sans défaut, sont retirés par erreur.
+Sur un lot de fabrication de 800 appareils, 64 sont écartés.
+
+\begin{enumMet}
+	\item Compléter le tableau suivant.
+	
+\begin{tabular}{|c|c|c|c|}
+	\cline { 2 - 4 } \multicolumn{1}{c|}{} & Défaut & Correct & Total \\
+	\hline Écartés & & & \\
+	\hline Conservés & & & \\
+	\hline Total & & & 800 \\
+	\hline
+\end{tabular}
+	\item On choisit au hasard un appareil parmi les produits écartés.
+	Quelle est la probabilité qu'il ait un défaut ?
+	\item Quelle est la probabilité qu'un produit conservé ait malgré tout un défaut ?
+\end{enumMet}
+
+\exerciceDS{ - (Ex 36 du LS)}
+
+Dans un lycée de 1250 élèves, 300 élèves se font vacciner contre la grippe.
+Pendant l'hiver, une épidémie de grippe éclate et $10 \%$ des élèves contractent la maladie.
+Par ailleurs, 3 \% des élèves vaccinés ont la grippe. On choisit au hasard l'un des élèves de ce lycée, tous les élèves ayant la même probabilité d'être choisis.
+On considère les événements suivants:
+\begin{itemMet}
+	\item V : \guillemets{L'élève choisi a été vacciné};
+	\item G: \guillemets{L'élève choisi a eu la grippe}.
+\end{itemMet}
+\begin{enumMet}
+	\item Réaliser un tableau croisé d'effectifs pour représenter cette situation.
+	\item Calculer la probabilité des événements V et G .
+	\item D'après l'énoncé, que vaut $P_v(G)$ ?
+	\item Modéliser l'expérience à l'aide d'un arbre pondéré.
+	\item Interpréter l'événement $V \cap G$, puis calculer sa probabilité.
+	\item Interpréter l'événement V $\cup G$, puis calculer sa probabilité.
+	\begin{baide}
+	On rappelle : $\mathrm{P}(\mathrm{V} \cup \mathrm{G})=\mathrm{P}(\mathrm{V})+\mathrm{P}(\mathrm{G})-\mathrm{P}(\mathrm{V} \cap \mathrm{G})$.
+	\end{baide}
+	\item On choisit un élève au hasard parmi ceux qui ont été vaccinés.
+	Quelle est la probabilité qu'il ait eu la grippe ?
+	\item On choisit un élève au hasard parmi ceux qui n'ont pas été vaccinés.
+	Quelle est la probabilité qu'il ait eu la grippe?
+\end{enumMet}
+
+
+
+
+
+
+
+\end{document}
+

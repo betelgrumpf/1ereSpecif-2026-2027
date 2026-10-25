@@ -1,0 +1,241 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+\usepackage{fourier-orns}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{Corrigé $-$ DS n$^{\circ}01$ $-$ Suite arithmétique $-$ 13/10/2026}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+
+	\begin{center}
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						Corrigé $-$ DS n$^{\circ}01$ \\
+						Croissance Linéaire $-$ Suite arithmétique
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+\begin{center}\textbf{50min - Barème indicatif}\end{center}
+\begin{center}\textbf{Les élèves avec un tier-temps ne traitent pas les questions avec  le symbole \ding{46}}\end{center}
+\begin{center}\textbf{Calculatrice non autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{ $-$ (1,5 points)}
+Pour chacune de ces suites arithmétiques définies sur $\mathbb{N}$, calculer $u(10)$.
+\begin{enumMet}
+	\item \ding{46} $u(n)=5 n-12$
+	\par
+	\begin{corrBox}
+		$u(10)=5\times 10-12=50-12=38$.
+	\end{corrBox}
+
+	\item $u(n)=\dfrac{4 n+7}{3}$
+	\par
+	\begin{corrBox}
+		$u(10)=\dfrac{4\times 10+7}{3}=\dfrac{40+7}{3}=\dfrac{47}{3}$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{ $-$ (3 points)}
+Dans chaque cas, $u$ est une suite arithmétique de raison $r$ et de premier terme $u(0)$. Pour les 2 cas, exprimer le terme général de la suite $u(n)$ et calculer le terme de rang 5.
+\begin{enumMet}
+	\item $r=-7$ et $u(0)=3$.
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique donc, pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=3-7n$.\\
+		Terme de rang 5 : $u(5)=3-7\times 5=3-35=-32$.
+	\end{corrBox}
+
+	\item \ding{46} $r=-1,2$ et $u(0)=5$.
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique donc, pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=5-1,2n$.\\
+		Terme de rang 5 : $u(5)=5-1,2\times 5=5-6=-1$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{ $-$ (4 points)}
+Dans chaque cas, la suite est arithmétique et définie sur $\mathbb{N}$.\\
+Identifier sa raison, puis en déduire si la suite est croissante ou décroissante. Justifier.
+\begin{enumMet}
+	\item $u(0)=4$ et $u(n+1)=u(n)-3$.
+	\par
+	\begin{corrBox}
+		$u(n+1)=u(n)+(-3)$ : on passe d'un terme au suivant en ajoutant $-3$, la raison est $r=-3$.\\
+		$r<0$ donc la suite $u$ est \textbf{décroissante}.
+	\end{corrBox}
+
+	\item $v(0)=-2$ et $v(n+1)=0,5+v(n)$.
+	\par
+	\begin{corrBox}
+		$v(n+1)=v(n)+0,5$ : on passe d'un terme au suivant en ajoutant $0,5$, la raison est $r=0,5$.\\
+		$r>0$ donc la suite $v$ est \textbf{croissante}.
+	\end{corrBox}
+
+	\item $w(n)=7-2n$.
+	\par
+	\begin{corrBox}
+		$w(n)=7-2n$ est de la forme $w(n)=w(0)+n\times r$ avec $w(0)=7$ et $r=-2$ (la raison est le coefficient de $n$).\\
+		$r<0$ donc la suite $w$ est \textbf{décroissante}.
+	\end{corrBox}
+
+	\item \ding{46} $t(n)=\dfrac{3n-5}{4}$.
+	\par
+	\begin{corrBox}
+		$t(n)=\dfrac{3n}{4}-\dfrac{5}{4}=-\dfrac{5}{4}+\dfrac{3}{4}n$, de la forme $t(n)=t(0)+n\times r$ avec $t(0)=-\dfrac{5}{4}$ et $r=\dfrac{3}{4}$.\\
+		$r>0$ donc la suite $t$ est \textbf{croissante}.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{ $-$ (3 points)}
+$u(n)$ est la suite arithmétique de raison 5 telle que $u(2)=-1$.
+\begin{enumMet}
+	\item Déterminer $u(0)$.
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique de raison 5 donc $u(2)=u(0)+2\times 5$, soit $-1=u(0)+10$.\\
+		Donc $u(0)=-1-10=-11$.
+	\end{corrBox}
+
+	\item Exprimer le terme général de la suite $u(n)$.
+	\par
+	\begin{corrBox}
+		Pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=-11+5n$.
+	\end{corrBox}
+
+	\item Calculer le 15ème terme de la suite (\danger).
+	\par
+	\begin{corrBox}
+		Le premier terme est $u(0)$, donc le 15ème terme est $u(14)$.\\
+		$u(14)=-11+5\times 14=-11+70=59$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{ $-$ (3,5 points)}
+Magalie a constaté que chaque année il y a 10 livres de plus dans sa bibliothèque.
+
+Au $1^{\text {er }}$ janvier 2020, elle avait 110 livres.
+On note $b_n$ le nombre de livres dans la bibliothèque de Magalie le $1^{\text {er }}$ janvier $2020+n$ où $n \in \mathbb{N}$.
+\begin{enumMet}
+	\item Montrer que la suite $\left(b_n\right)$ est arithmétique et préciser sa raison et son premier terme.
+	\par
+	\begin{corrBox}
+		Chaque année, le nombre de livres augmente de 10 : pour tout $n\in\mathbb{N}$, $b_{n+1}=b_n+10$.\\
+		On passe d'un terme au suivant en ajoutant toujours le même nombre, donc la suite $\left(b_n\right)$ est arithmétique de raison $r=10$ et de premier terme $b_0=110$.
+	\end{corrBox}
+
+	\item Exprimer le terme général de la suite $b_n$.
+	\par
+	\begin{corrBox}
+		Pour tout $n\in\mathbb{N}$, $b_n=b_0+n\times r$, soit $b_n=110+10n$.
+	\end{corrBox}
+
+	\item Si cette évolution se poursuit ainsi, combien de livres aura Magalie dans sa bibliothèque au $1^{\text {er }}$ janvier 2030 ?
+	\par
+	\begin{corrBox}
+		$2030=2020+10$, donc on calcule $b_{10}=110+10\times 10=110+100=210$.\\
+		Au $1^{\text{er}}$ janvier 2030, Magalie aura 210 livres dans sa bibliothèque.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{ $-$ (5 points)}
+Les premiers termes d'une suite $u(n)$ sont représentés dans le graphique ci-dessous :
+
+\begin{center}
+\begin{tikzpicture}[x=1.3cm,y=3.2cm,>=latex]
+	% quadrillage : 0,5 en abscisse, 0,25 en ordonnée
+	\draw[gray!45, very thin, xstep=0.5, ystep=0.25] (0,0) grid (5.75,1.95);
+	% axes
+	\draw[->, thick] (-0.25,0) -- (5.9,0) node[below right] {$n$};
+	\draw[->, thick] (0,-0.08) -- (0,2.05) node[right] {$u_n$};
+	\node[below left] at (0,0) {O};
+	% graduations
+	\foreach \k in {1,...,5}
+		\draw[thick] (\k,0.03) -- (\k,-0.03) node[below] {$\k$};
+	\foreach \yy/\lab in {0.5/{0,5},1/1,1.5/{1,5}}
+		\draw[thick] (0.08,\yy) -- (-0.08,\yy) node[left] {$\lab$};
+	% lecture graphique de u(4)
+	\draw[dashed, blue!70!black] (0,1.5) -- (4,1.5);
+	\draw[dashed, blue!70!black] (4,0) -- (4,1.5);
+	% termes de la suite
+	\foreach \n in {0,...,5}{
+		\pgfmathsetmacro{\yy}{0.5+0.25*\n}
+		\draw[red, thick] (\n,\yy) +(-4pt,0) -- +(4pt,0) +(0,-4pt) -- +(0,4pt);
+	}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumMet}
+	\item Donner la valeur du 3ème terme de la suite (\danger).
+	\par
+	\begin{corrBox}
+		Le premier terme est $u(0)$, donc le 3ème terme est $u(2)$.\\
+		Par lecture graphique, $u(2)=1$.
+	\end{corrBox}
+
+	\item Donner la valeur de $u(5)$.
+	\par
+	\begin{corrBox}
+		Par lecture graphique, $u(5)=1,75$.
+	\end{corrBox}
+
+	\item Montrer que la suite $\left(u(n)\right)$ est arithmétique et préciser sa raison et son premier terme.
+	\par
+	\begin{corrBox}
+		Par lecture graphique : $u(0)=0,5$ ; $u(1)=0,75$ ; $u(2)=1$ ; $u(3)=1,25$ ; $u(4)=1,5$ ; $u(5)=1,75$.\\
+		$u(1)-u(0)=u(2)-u(1)=u(3)-u(2)=u(4)-u(3)=u(5)-u(4)=0,25$.\\
+		On passe d'un terme au suivant en ajoutant toujours $0,25$ : les points sont alignés et la suite $\left(u(n)\right)$ est arithmétique de raison $r=0,25$ et de premier terme $u(0)=0,5$.
+	\end{corrBox}
+
+	\item En déduire le terme général de la suite.
+	\par
+	\begin{corrBox}
+		Pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=0,5+0,25n$.
+	\end{corrBox}
+
+	\item \ding{46} Donner la valeur de $u(24)$.
+	\par
+	\begin{corrBox}
+		$u(24)=0,5+0,25\times 24=0,5+6=6,5$.
+	\end{corrBox}
+\end{enumMet}
+
+\end{document}

@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+\usepackage{fourier-orns}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{Entraînement DS n$^{\circ}01$ $-$ Suite arithmétique}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+
+	\begin{center}
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						Sujet d'entraînement $-$ DS n$^{\circ}01$ \\
+						Croissance Linéaire $-$ Suite arithmétique
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+\begin{center}\textbf{Calculatrice non autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+\exerciceDS{}
+Pour chacune de ces suites arithmétiques définies sur $\mathbb{N}$, calculer $u(10)$.
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item \ding{46} $u(n)=3 n-8$
+		\item $u(n)=\dfrac{2 n+5}{5}$
+	\end{enumMet}
+\end{multicols}
+
+\exerciceDS{}
+Dans chaque cas, $u$ est une suite arithmétique de raison $r$ et de premier terme $u(0)$. Pour les 2 cas, exprimer le terme général de la suite $u(n)$ et calculer le terme de rang 5.
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $r=-4$ et $u(0)=6$.
+		\item \ding{46} $r=-0,5$ et $u(0)=3$.
+	\end{enumMet}
+\end{multicols}
+
+
+\exerciceDS{}
+Dans chaque cas, la suite est arithmétique et définie sur $\mathbb{N}$.\\
+Identifier sa raison, puis en déduire si la suite est croissante ou décroissante. Justifier.
+\begin{multicols}{2}
+	\begin{enumMet}
+		\item $u(0)=10$ et $u(n+1)=u(n)+2,5$.
+		\item $v(0)=1$ et $v(n+1)=-4+v(n)$.
+		\item $w(n)=-3+5n$.
+		\item \ding{46} $t(n)=\dfrac{6-n}{2}$.
+	\end{enumMet}
+\end{multicols}
+
+
+\exerciceDS{}
+$u(n)$ est la suite arithmétique de raison $-3$ telle que $u(4)=2$.
+\begin{enumMet}
+	\item Déterminer $u(0)$.
+	\item Exprimer le terme général de la suite $u(n)$.
+	\item Calculer le 12ème terme de la suite (\danger).
+\end{enumMet}
+
+
+\exerciceDS{}
+Une entreprise de location de vélos possédait 40 vélos au $1^{\text {er }}$ mars 2024. Chaque année, elle achète 12 vélos supplémentaires.
+
+On note $v_n$ le nombre de vélos de l'entreprise au $1^{\text {er }}$ mars $2024+n$ où $n \in \mathbb{N}$.
+\begin{enumMet}
+	\item Montrer que la suite $\left(v_n\right)$ est arithmétique et préciser sa raison et son premier terme.
+	\item Exprimer le terme général de la suite $v_n$.
+	\item Si cette évolution se poursuit ainsi, combien de vélos l'entreprise possédera-t-elle au $1^{\text {er }}$ mars 2034 ?
+\end{enumMet}
+
+
+\exerciceDS{}
+Les premiers termes d'une suite $u(n)$ sont représentés dans le graphique ci-dessous :
+
+\begin{center}
+\begin{tikzpicture}[x=1.3cm,y=1.6cm,>=latex]
+	% quadrillage : 0,5 en abscisse et en ordonnée
+	\draw[gray!45, very thin, step=0.5] (0,0) grid (5.75,3.75);
+	% axes
+	\draw[->, thick] (-0.25,0) -- (5.9,0) node[below right] {$n$};
+	\draw[->, thick] (0,-0.15) -- (0,3.9) node[right] {$u_n$};
+	\node[below left] at (0,0) {O};
+	% graduations
+	\foreach \k in {1,...,5}
+		\draw[thick] (\k,0.05) -- (\k,-0.05) node[below] {$\k$};
+	\foreach \yy in {1,2,3}
+		\draw[thick] (0.08,\yy) -- (-0.08,\yy) node[left] {$\yy$};
+	% lecture graphique de u(1)
+	\draw[dashed, blue!70!black] (0,2.5) -- (1,2.5);
+	\draw[dashed, blue!70!black] (1,0) -- (1,2.5);
+	% termes de la suite
+	\foreach \n in {0,...,5}{
+		\pgfmathsetmacro{\yy}{3-0.5*\n}
+		\draw[red, thick] (\n,\yy) +(-4pt,0) -- +(4pt,0) +(0,-4pt) -- +(0,4pt);
+	}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumMet}
+	\item Donner la valeur du 4ème terme de la suite (\danger).
+	\item Donner la valeur de $u(5)$.
+	\item Montrer que la suite $\left(u(n)\right)$ est arithmétique et préciser sa raison et son premier terme.
+	\item En déduire le terme général de la suite.
+	\item \ding{46} Donner la valeur de $u(20)$.
+\end{enumMet}
+
+
+\exerciceDS{}
+Soit $u(n)$ la suite définie par $u(0)=5$ et $u(n+1)=u(n)+10$.
+\begin{enumMet}
+	\item Étudier les variations de la suite $u(n)$.
+	\item Calculer $u(1)$, $u(2)$ et $u(3)$.
+	\item Exprimer $u(n)$ en fonction de $n$ (c'est-à-dire le terme général de la suite $u(n)$).
+	\item Calculer $u(10)$.
+	\item À partir de quelle valeur de $n$ a-t-on $u(n)>155$ ?
+\end{enumMet}
+
+\end{document}

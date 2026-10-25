@@ -1,0 +1,280 @@
+\documentclass[11pt,a4paper]{article}  % Déclare la classe du document.
+
+\newcommand{\chaptermark}[2]{\og #2 \fg{} (#1)} % ligne uniquement pour éviter une erreur en cas d'article
+\include{../1ere-preambule}
+\usepackage{fourier-orns}
+
+\usepackage{epic}   % extension et simplification de  l'environnement picture
+\usepackage{graphicx}    % permet d'inclure des graphique externe dans un document
+\usepackage{arydshln}   %permet d'avoir des lignes en pointillés
+
+\newcommand{\lignes}[1]{
+	\setlength{\unitlength}{1mm}
+	\vskip 0,4cm\noindent
+	\multido{\i=0+1}{#1}{%
+		\noindent
+		\begin{picture}(150,5)
+			\linethickness{0,005mm}
+			\put(-5,0){\dashline{1}(175,5)(5,5)}
+		\end{picture}\vskip 0,001cm
+	}
+	\vskip 0cm
+}
+
+\rhead{Corrigé $-$ Entraînement DS n$^{\circ}01$ $-$ Suite arithmétique}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+\begin{document}
+	\graphicspath{{images/}}
+
+	\begin{center}
+		\fbox{
+			\begin{minipage}[]{15cm}
+				\begin{center}
+					\LARGE{\rule{0.5cm}{0pt}\rule[-0.25cm]{0pt}{0.9cm}
+						Corrigé $-$ Sujet d'entraînement $-$ DS n$^{\circ}01$ \\
+						Croissance Linéaire $-$ Suite arithmétique
+					}
+				\end{center}
+			\end{minipage}
+		}
+	\end{center}
+
+\begin{center}\textbf{Calculatrice non autorisée.\\Les résultats devront être justifiés (à l'aide de calcul ou de propriétés).}\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+Pour chacune de ces suites arithmétiques définies sur $\mathbb{N}$, calculer $u(10)$.
+\begin{enumMet}
+	\item \ding{46} $u(n)=3 n-8$
+	\par
+	\begin{corrBox}
+		$u(10)=3\times 10-8=30-8=22$.
+	\end{corrBox}
+
+	\item $u(n)=\dfrac{2 n+5}{5}$
+	\par
+	\begin{corrBox}
+		$u(10)=\dfrac{2\times 10+5}{5}=\dfrac{25}{5}=5$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+Dans chaque cas, $u$ est une suite arithmétique de raison $r$ et de premier terme $u(0)$. Pour les 2 cas, exprimer le terme général de la suite $u(n)$ et calculer le terme de rang 5.
+\begin{enumMet}
+	\item $r=-4$ et $u(0)=6$.
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique donc, pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=6-4n$.\\
+		Terme de rang 5 : $u(5)=6-4\times 5=6-20=-14$.
+	\end{corrBox}
+
+	\item \ding{46} $r=-0,5$ et $u(0)=3$.
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique donc, pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=3-0,5n$.\\
+		Terme de rang 5 : $u(5)=3-0,5\times 5=3-2,5=0,5$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+Dans chaque cas, la suite est arithmétique et définie sur $\mathbb{N}$.\\
+Identifier sa raison, puis en déduire si la suite est croissante ou décroissante. Justifier.
+\begin{enumMet}
+	\item $u(0)=10$ et $u(n+1)=u(n)+2,5$.
+	\par
+	\begin{corrBox}
+		On passe d'un terme au suivant en ajoutant $2,5$ : la raison est $r=2,5$.\\
+		$r>0$ donc la suite $u$ est \textbf{croissante}.
+	\end{corrBox}
+
+	\item $v(0)=1$ et $v(n+1)=-4+v(n)$.
+	\par
+	\begin{corrBox}
+		$v(n+1)=v(n)+(-4)$ : on passe d'un terme au suivant en ajoutant $-4$, la raison est $r=-4$.\\
+		$r<0$ donc la suite $v$ est \textbf{décroissante}.
+	\end{corrBox}
+
+	\item $w(n)=-3+5n$.
+	\par
+	\begin{corrBox}
+		$w(n)=-3+5n$ est de la forme $w(n)=w(0)+n\times r$ avec $w(0)=-3$ et $r=5$ (la raison est le coefficient de $n$).\\
+		$r>0$ donc la suite $w$ est \textbf{croissante}.
+	\end{corrBox}
+
+	\item \ding{46} $t(n)=\dfrac{6-n}{2}$.
+	\par
+	\begin{corrBox}
+		$t(n)=\dfrac{6}{2}-\dfrac{n}{2}=3-0,5n$, de la forme $t(n)=t(0)+n\times r$ avec $t(0)=3$ et $r=-0,5$.\\
+		$r<0$ donc la suite $t$ est \textbf{décroissante}.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+$u(n)$ est la suite arithmétique de raison $-3$ telle que $u(4)=2$.
+\begin{enumMet}
+	\item Déterminer $u(0)$.
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique de raison $-3$ donc $u(4)=u(0)+4\times(-3)$, soit $2=u(0)-12$.\\
+		Donc $u(0)=2+12=14$.
+	\end{corrBox}
+
+	\item Exprimer le terme général de la suite $u(n)$.
+	\par
+	\begin{corrBox}
+		Pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=14-3n$.
+	\end{corrBox}
+
+	\item Calculer le 12ème terme de la suite (\danger).
+	\par
+	\begin{corrBox}
+		Le premier terme est $u(0)$, donc le 12ème terme est $u(11)$.\\
+		$u(11)=14-3\times 11=14-33=-19$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+Une entreprise de location de vélos possédait 40 vélos au $1^{\text {er }}$ mars 2024. Chaque année, elle achète 12 vélos supplémentaires.
+
+On note $v_n$ le nombre de vélos de l'entreprise au $1^{\text {er }}$ mars $2024+n$ où $n \in \mathbb{N}$.
+\begin{enumMet}
+	\item Montrer que la suite $\left(v_n\right)$ est arithmétique et préciser sa raison et son premier terme.
+	\par
+	\begin{corrBox}
+		Chaque année, le nombre de vélos augmente de 12 : pour tout $n\in\mathbb{N}$, $v_{n+1}=v_n+12$.\\
+		On passe d'un terme au suivant en ajoutant toujours le même nombre, donc la suite $\left(v_n\right)$ est arithmétique de raison $r=12$ et de premier terme $v_0=40$.
+	\end{corrBox}
+
+	\item Exprimer le terme général de la suite $v_n$.
+	\par
+	\begin{corrBox}
+		Pour tout $n\in\mathbb{N}$, $v_n=v_0+n\times r$, soit $v_n=40+12n$.
+	\end{corrBox}
+
+	\item Si cette évolution se poursuit ainsi, combien de vélos l'entreprise possédera-t-elle au $1^{\text {er }}$ mars 2034 ?
+	\par
+	\begin{corrBox}
+		$2034=2024+10$, donc on calcule $v_{10}=40+12\times 10=40+120=160$.\\
+		Au $1^{\text{er}}$ mars 2034, l'entreprise possédera 160 vélos.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+Les premiers termes d'une suite $u(n)$ sont représentés dans le graphique ci-dessous :
+
+\begin{center}
+\begin{tikzpicture}[x=1.3cm,y=1.6cm,>=latex]
+	% quadrillage : 0,5 en abscisse et en ordonnée
+	\draw[gray!45, very thin, step=0.5] (0,0) grid (5.75,3.75);
+	% axes
+	\draw[->, thick] (-0.25,0) -- (5.9,0) node[below right] {$n$};
+	\draw[->, thick] (0,-0.15) -- (0,3.9) node[right] {$u_n$};
+	\node[below left] at (0,0) {O};
+	% graduations
+	\foreach \k in {1,...,5}
+		\draw[thick] (\k,0.05) -- (\k,-0.05) node[below] {$\k$};
+	\foreach \yy in {1,2,3}
+		\draw[thick] (0.08,\yy) -- (-0.08,\yy) node[left] {$\yy$};
+	% lecture graphique de u(1)
+	\draw[dashed, blue!70!black] (0,2.5) -- (1,2.5);
+	\draw[dashed, blue!70!black] (1,0) -- (1,2.5);
+	% termes de la suite
+	\foreach \n in {0,...,5}{
+		\pgfmathsetmacro{\yy}{3-0.5*\n}
+		\draw[red, thick] (\n,\yy) +(-4pt,0) -- +(4pt,0) +(0,-4pt) -- +(0,4pt);
+	}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumMet}
+	\item Donner la valeur du 4ème terme de la suite (\danger).
+	\par
+	\begin{corrBox}
+		Le premier terme est $u(0)$, donc le 4ème terme est $u(3)$.\\
+		Par lecture graphique, $u(3)=1,5$.
+	\end{corrBox}
+
+	\item Donner la valeur de $u(5)$.
+	\par
+	\begin{corrBox}
+		Par lecture graphique, $u(5)=0,5$.
+	\end{corrBox}
+
+	\item Montrer que la suite $\left(u(n)\right)$ est arithmétique et préciser sa raison et son premier terme.
+	\par
+	\begin{corrBox}
+		Par lecture graphique : $u(0)=3$ ; $u(1)=2,5$ ; $u(2)=2$ ; $u(3)=1,5$ ; $u(4)=1$ ; $u(5)=0,5$.\\
+		$u(1)-u(0)=u(2)-u(1)=u(3)-u(2)=u(4)-u(3)=u(5)-u(4)=-0,5$.\\
+		On passe d'un terme au suivant en ajoutant toujours $-0,5$ : les points sont alignés et la suite $\left(u(n)\right)$ est arithmétique de raison $r=-0,5$ et de premier terme $u(0)=3$.
+	\end{corrBox}
+
+	\item En déduire le terme général de la suite.
+	\par
+	\begin{corrBox}
+		Pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=3-0,5n$.
+	\end{corrBox}
+
+	\item \ding{46} Donner la valeur de $u(20)$.
+	\par
+	\begin{corrBox}
+		$u(20)=3-0,5\times 20=3-10=-7$.
+	\end{corrBox}
+\end{enumMet}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\exerciceDS{}
+Soit $u(n)$ la suite définie par $u(0)=5$ et $u(n+1)=u(n)+10$.
+\begin{enumMet}
+	\item Étudier les variations de la suite $u(n)$.
+	\par
+	\begin{corrBox}
+		On passe d'un terme au suivant en ajoutant 10 : $u$ est une suite arithmétique de raison $r=10$.\\
+		$r>0$ donc la suite $u$ est \textbf{croissante}.
+	\end{corrBox}
+
+	\item Calculer $u(1)$, $u(2)$ et $u(3)$.
+	\par
+	\begin{corrBox}
+		$u(1)=u(0)+10=5+10=15$\\
+		$u(2)=u(1)+10=15+10=25$\\
+		$u(3)=u(2)+10=25+10=35$
+	\end{corrBox}
+
+	\item Exprimer $u(n)$ en fonction de $n$ (c'est-à-dire le terme général de la suite $u(n)$).
+	\par
+	\begin{corrBox}
+		$u$ est arithmétique de raison $r=10$ et de premier terme $u(0)=5$.\\
+		Pour tout $n\in\mathbb{N}$, $u(n)=u(0)+n\times r$, soit $u(n)=5+10n$.
+	\end{corrBox}
+
+	\item Calculer $u(10)$.
+	\par
+	\begin{corrBox}
+		$u(10)=5+10\times 10=5+100=105$.
+	\end{corrBox}
+
+	\item À partir de quelle valeur de $n$ a-t-on $u(n)>155$ ?
+	\par
+	\begin{corrBox}
+		$u(n)>155 \iff 5+10n>155 \iff 10n>150 \iff n>15$.\\
+		$n$ est un entier naturel, donc $u(n)>155$ à partir de $n=16$.\\
+		Vérification : $u(15)=5+150=155$ (pas strictement supérieur à 155) et $u(16)=5+160=165>155$.
+	\end{corrBox}
+\end{enumMet}
+
+\end{document}

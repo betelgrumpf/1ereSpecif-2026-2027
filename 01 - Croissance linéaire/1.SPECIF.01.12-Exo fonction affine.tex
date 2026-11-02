@@ -1,0 +1,261 @@
+\documentclass[12pt,a4paper]{book}
+%\documentclass[a4paper,french]{book}
+%\usepackage[17pt]{extsizes}
+
+
+\input{../1ere-preambule}
+
+\newcommand{\va}[1]{\lvert \ #1 \ \rvert}
+\newcommand{\vaf}[1]{\left\lvert \ #1\  \right\rvert}
+
+% ---------- Outils pour les repères TikZ ----------
+% \repere{xmin}{xmax}{ymin}{ymax} : quadrillage + axes + graduations 0 et 1
+\newcommand{\repere}[4]{%
+	\draw[gray!45, very thin] (#1,#3) grid (#2,#4);
+	\draw[->,thick] (#1,0) -- (#2+0.4,0) node[below left] {$x$};
+	\draw[->,thick] (0,#3) -- (0,#4+0.4) node[below left] {$y$};
+	\node[below left] at (0,0) {$0$};
+	\draw[thick] (1,3pt) -- (1,-3pt) node[below] {$1$};
+	\draw[thick] (3pt,1) -- (-3pt,1) node[left] {$1$};
+}
+% \croix{x,y} : point marqué d'une croix
+\newcommand{\croix}[1]{\node[inner sep=0pt] at (#1) {\large$\times$};}
+\colorlet{courbeA}{red!75!black}
+\colorlet{courbeB}{green!50!black}
+\colorlet{courbeC}{blue!70!black}
+
+\begin{document}
+\graphicspath{{images/}}
+%\setcounter{chapter}{1}
+\chapter[Fonction Affine - Exercices]{Fonction Affine et Linéaire \\ Exercices d'entrainement}
+\thispagestyle{fancy}
+
+\exerciceDS{}
+
+Soit $f$ la fonction affine définie pour tout réel $x$ par $f(x)=5 x-4$.
+\begin{enumMet}
+	\item Déterminer $f(-2)$.
+%$$
+%f(-2)=5 \times(-2)-4=-14
+%$$
+	\item Quelle est l'image de 3 par $f$ ?
+%
+%L'image de 3 par $f$ vaut $f(3)=5 \times 3-4=11$
+	\item Résoudre $f(x)=6$.
+%$$
+%\begin{aligned}
+%	f(x)=6 & \Leftrightarrow 5 x-4=6 \\
+%	& \Leftrightarrow 5 x=10 \\
+%	& \Leftrightarrow x=2
+%\end{aligned}
+%$$
+	\item Déterminer le ou les antécédents de 5 par $f$.
+%$f(x)=5 \Leftrightarrow 5x-4=5 \Leftrightarrow x=\frac{9}{5}$. L'antécédent de 5 est $\frac{9}{5}$.
+\end{enumMet}
+
+\exerciceDS{}
+La fonction $f$ est une fonction dont la représentation graphique est la droite $(A B)$ et la fonction $g$ une fonction dont la représentation graphique est la droite $(CD)$. Par lecture graphique, exprimer $f(x)$ et $g(x)$ en fonction de $x$.
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.75]
+		\repere{-2}{5}{-1}{8}
+		\begin{scope}
+			\clip (-2,-1) rectangle (5,8);
+			\draw[very thick, courbeA] plot[domain=-2:5] (\x,{0.5*\x+3});
+			\draw[very thick, courbeB] plot[domain=0:3] (\x,{-3*\x+7});
+		\end{scope}
+		\croix{0,3} \node[above left] at (0,3) {$A$};
+		\croix{2,4} \node[below right] at (2,4) {$B$};
+		\croix{0,7} \node[left] at (0,7) {$C$};
+		\croix{1,4} \node[above right] at (1,4) {$D$};
+	\end{tikzpicture}
+\end{center}
+%$$
+%\begin{aligned}
+%	& f(x)=\frac{1}{2} x+3 \\
+%	& g(x)=-3 x+7
+%\end{aligned}
+%$$
+
+\exerciceDS{}
+On a représenté ci-dessous, par une droite, une fonction $g$. Exprimer $g(x)$ en fonction de $x$.
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.75]
+		\repere{-1}{11}{-1}{5}
+		\begin{scope}
+			\clip (-1,-1) rectangle (11,5);
+			\draw[very thick, courbeA] plot[domain=-1:11] (\x,{-\x/7+24/7});
+		\end{scope}
+		\croix{3,3}
+		\croix{10,2}
+	\end{tikzpicture}
+\end{center}
+
+%Cette droite représente une fonction affine. Elle passe par $(3;3)$ et $(10;2)$.
+%Le coefficient directeur est égal à $m=\frac{2-3}{10-3}=\frac{-1}{7}$.
+%$g(3)=3 \Leftrightarrow -\frac{3}{7}+p=3 \Leftrightarrow p=\frac{24}{7}$, donc $g(x)=-\frac{1}{7}x+\frac{24}{7}$.
+
+\exerciceDS{}
+
+La fonction $f$ est une fonction affine dont la représentation graphique passe par les points $A(-1 ; 9)$ et $B(4 ;-1)$.
+\begin{enumMet}
+	\item Déterminer une expression de $f(x)$ en fonction de $x$.
+	\item Calculer $f(2)$.
+%$$
+%m=\frac{-1-9}{4-(-1)}=\frac{-10}{5}=-2, \text { donc } f(x)=-2 x+p
+%$$
+%$\operatorname{Or} f(-1)=9 \Leftrightarrow-2 \times(-1)+p=9$
+%$$
+%\Leftrightarrow p=9-2=7
+%$$
+
+%Donc $f(x)=-2 x+7$. Ainsi $f(2)=-2 \times 2+7=3$.
+	\item Le point de coordonnées $(0 ; 5)$ appartient-il à la courbe représentative de $f$ ?
+%$f(0)=7 \neq 5$, donc le point de coordonnées $(0 ; 5)$ n'appartient pas à la courbe.
+
+\end{enumMet}
+\exerciceDS{}
+
+Parmi les fonctions affines définies ci-dessous, entourer celles qui sont strictement décroissantes sur $\mathbb{R}$.
+\begin{multicols}{3}
+\begin{enumMet}
+	\item $f(x)=\dfrac{1}{4} x+1$
+	\item $f(x)=-5 x+3$
+	\item $f(x)=1-x$
+	\item $f(x)=-9$
+	\item $f(x)=-2+x$
+	\item $f(x)=-6 x$
+\end{enumMet}
+\end{multicols}
+%Strictement décroissantes : 2), 3) et 6). La fonction 4) est constante.
+
+\exerciceDS{}
+
+Soit $g$ la fonction définie pour tout nombre réel $x$ par $g(x)=5-\dfrac{x}{2}$.
+\begin{enumMet}
+	\item Déterminer le sens de variation de $g$. 
+%$g(x)=-\frac{1}{2} x+5$ et $-\frac{1}{2}<0$ donc $g$ est une fonction affine strictement décroissante sur $\mathbb{R}$.
+	\item Comparer les valeurs de $g(72)$ et $g(79)$ sans les calculer.
+%$72<79$ et $g$ est strictement décroissante sur $\mathbb{R}$, donc
+%$$
+%g(72)>g(79)
+%$$
+	\item Déterminer le signe de $g(x)$ selon les valeurs de $x$.
+%$$
+%g(x)=0 \Leftrightarrow 5-\frac{x}{2}=0 \Leftrightarrow \frac{x}{2}=5 \Leftrightarrow x=10
+%$$
+%$g$ est strictement décroissante sur $\mathbb{R}$ et s'annule en 10,
+%donc $g(x)>0$ sur $]-\infty;10[$ et $g(x)<0$ sur $]10;+\infty[$.
+\end{enumMet}
+
+\exerciceDS{}
+
+Soit $f$ une fonction affine dont la représentation graphique passe par les points $A(-1 ; 4)$ et $B(4 ; 7)$.
+\begin{enumMet}
+	\item Déterminer une expression de $f(x)$ en fonction de $x$.
+	\item Calculer $f(3)$. 
+
+%$m=\frac{7-4}{4-(-1)}=\frac{3}{5}$ donc $f(x)=\frac{3}{5} x+p$.
+%
+%Or $f(-1)=4$ donc $\frac{3}{5} \times(-1)+p=4$ donc $p=4+\frac{3}{5}=\frac{23}{5}$.
+%
+%Donc $f(x)=\frac{3}{5} x+\frac{23}{5}$.
+
+%Ainsi $f(3)=\frac{3}{5} \times 3+\frac{23}{5}=\frac{32}{5}$
+	\item Le point $C\left(\dfrac{5}{4} ; 5,3\right)$ appartient-t-il à la courbe représentative de $f$ ?
+%$f\left(\frac{5}{4}\right)=\frac{3}{4}+\frac{23}{5}=\frac{107}{20}=5,35 \neq 5,3$ donc $C$ n'appartient pas à la courbe.
+\end{enumMet}
+
+% ================== NOUVEAUX EXERCICES ==================
+
+\exerciceDS{}
+La fonction $f$ est représentée par la droite $(AB)$ et la fonction $g$ par la droite $(CD)$.
+\begin{enumMet}
+	\item Par lecture graphique, exprimer $f(x)$ et $g(x)$ en fonction de $x$.
+	\item Déterminer par le calcul les coordonnées du point d'intersection des droites $(AB)$ et $(CD)$.
+\end{enumMet}
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.75]
+		\repere{-3}{6}{-3}{6}
+		\begin{scope}
+			\clip (-3,-3) rectangle (6,6);
+			\draw[very thick, courbeA] plot[domain=-3:6] (\x,{4/3*\x-2});
+			\draw[very thick, courbeB] plot[domain=-3:6] (\x,{-0.5*\x+3});
+		\end{scope}
+		\croix{0,-2} \node[left] at (0,-2) {$A$};
+		\croix{3,2} \node[left] at (3,2.1) {$B$};
+		\croix{-2,4} \node[above] at (-2,4) {$C$};
+		\croix{4,1} \node[below left] at (4,1) {$D$};
+	\end{tikzpicture}
+\end{center}
+%1) $f(0)=-2$ et $m=\frac{2-(-2)}{3-0}=\frac{4}{3}$ donc $f(x)=\frac{4}{3}x-2$.
+%   $g(0)=3$ et $m=\frac{1-4}{4-(-2)}=-\frac{1}{2}$ donc $g(x)=-\frac{1}{2}x+3$.
+%2) $\frac{4}{3}x-2=-\frac{1}{2}x+3 \Leftrightarrow \frac{11}{6}x=5 \Leftrightarrow x=\frac{30}{11}$
+%   et $g\left(\frac{30}{11}\right)=-\frac{15}{11}+3=\frac{18}{11}$. Point d'intersection : $\left(\frac{30}{11};\frac{18}{11}\right)$.
+
+\exerciceDS{}
+On a représenté ci-dessous, par une droite passant par les points $E$ et $F$, une fonction $k$. Exprimer $k(x)$ en fonction de $x$.
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.75]
+		\repere{-3}{6}{-4}{3}
+		\begin{scope}
+			\clip (-3,-4) rectangle (6,3);
+			\draw[very thick, courbeA] plot[domain=-3:6] (\x,{0.8*\x-2.2});
+		\end{scope}
+		\croix{-1,-3} \node[above left] at (-1,-3) {$E$};
+		\croix{4,1} \node[above left] at (4,1) {$F$};
+	\end{tikzpicture}
+\end{center}
+%L'ordonnée à l'origine ne se lit pas précisément : on utilise $E(-1;-3)$ et $F(4;1)$.
+%$m=\frac{1-(-3)}{4-(-1)}=\frac{4}{5}$, donc $k(x)=\frac{4}{5}x+p$.
+%$k(4)=1 \Leftrightarrow \frac{16}{5}+p=1 \Leftrightarrow p=-\frac{11}{5}$. Donc $k(x)=\frac{4}{5}x-\frac{11}{5}$.
+
+\exerciceDS{}
+Les droites $d_1$, $d_2$ et $d_3$ ci-dessous représentent trois fonctions $u$, $v$ et $w$.
+\begin{enumMet}
+	\item Parmi ces fonctions, laquelle est constante ? laquelle est linéaire ? Justifier.
+	\item Par lecture graphique, exprimer $u(x)$, $v(x)$ et $w(x)$ en fonction de $x$.
+	\item Donner le sens de variation de chacune de ces trois fonctions.
+\end{enumMet}
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.75]
+		\repere{-4}{5}{-4}{5}
+		\begin{scope}
+			\clip (-4,-4) rectangle (5,5);
+			\draw[very thick, courbeA] plot[domain=-4:5] (\x,{-2});
+			\draw[very thick, courbeB] plot[domain=-4:5] (\x,{-2/3*\x});
+			\draw[very thick, courbeC] plot[domain=-4:5] (\x,{4/3*\x+8/3});
+		\end{scope}
+		\node[courbeA, above] at (-3.4,-2) {$d_1$};
+		\node[courbeB, above] at (-3.4,2.3) {$d_2$};
+		\node[courbeC, right] at (1.6,4.8) {$d_3$};
+		\croix{3,-2}
+		\croix{-2,0}
+		\croix{1,4}
+	\end{tikzpicture}
+\end{center}
+%1) $d_1$ est parallèle à l'axe des abscisses : $u$ est constante. $d_2$ passe par l'origine : $v$ est linéaire.
+%2) $u(x)=-2$. $d_2$ passe par $O$ et $(3;-2)$ donc $v(x)=-\frac{2}{3}x$.
+%   $d_3$ passe par $(-2;0)$ et $(1;4)$ : $m=\frac{4-0}{1-(-2)}=\frac{4}{3}$ et $w(1)=4 \Leftrightarrow p=\frac{8}{3}$, donc $w(x)=\frac{4}{3}x+\frac{8}{3}$.
+%3) $u$ est constante, $v$ est strictement décroissante ($-\frac{2}{3}<0$), $w$ est strictement croissante ($\frac{4}{3}>0$).
+
+\exerciceDS{}
+
+La fonction $h$ est une fonction affine dont la représentation graphique passe par les points $A(-3 ; -5)$ et $B(2 ; 5)$.
+\begin{enumMet}
+	\item Déterminer une expression de $h(x)$ en fonction de $x$.
+%$m=\frac{5-(-5)}{2-(-3)}=\frac{10}{5}=2$, donc $h(x)=2x+p$.
+%Or $h(2)=5 \Leftrightarrow 2\times 2+p=5 \Leftrightarrow p=1$. Donc $h(x)=2x+1$.
+	\item Calculer $h(4)$.
+%$h(4)=2\times 4+1=9$.
+	\item Déterminer l'antécédent de $0$ par $h$.
+%$h(x)=0 \Leftrightarrow 2x+1=0 \Leftrightarrow x=-\frac{1}{2}$.
+	\item Les points $E(5 ; 11)$ et $F(-1 ; -2)$ appartiennent-ils à la courbe représentative de $h$ ?
+%$h(5)=11$ donc $E$ appartient à la courbe ; $h(-1)=-1 \neq -2$ donc $F$ n'appartient pas à la courbe.
+\end{enumMet}
+
+\end{document}
